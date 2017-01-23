@@ -1,8 +1,27 @@
-﻿Build started 1/23/2017 1:05:17 PM.
-     1>Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" on node 2 (Build target(s)).
+﻿Build started 1/23/2017 1:06:34 PM.
+     1>Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib Range.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib Stdafx.cpp
+         Stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp ExcelApplication.cpp Range.cpp Workbook.cpp Worksheet.cpp
+         AssemblyInfo.cpp
+         ExcelApplication.cpp
+     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Workbook.h(15): warning C4677: '[]': signature of non-private member contains assembly private type 'WorksheetWrapper::Worksheet'
+                 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Worksheet.h(33) : see declaration of 'WorksheetWrapper::Worksheet'
+     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Workbook.h(16): warning C4677: '[]': signature of non-private member contains assembly private type 'WorksheetWrapper::Worksheet'
+                 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Worksheet.h(33) : see declaration of 'WorksheetWrapper::Worksheet'
          Range.cpp
+         Workbook.cpp
+     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Workbook.h(15): warning C4677: '[]': signature of non-private member contains assembly private type 'WorksheetWrapper::Worksheet'
+                 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Worksheet.h(33) : see declaration of 'WorksheetWrapper::Worksheet'
+     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Workbook.h(16): warning C4677: '[]': signature of non-private member contains assembly private type 'WorksheetWrapper::Worksheet'
+                 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Worksheet.h(33) : see declaration of 'WorksheetWrapper::Worksheet'
+         Worksheet.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\CCrowe\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.5.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
          Debug\AssemblyInfo.obj
@@ -13,8 +32,8 @@
          Debug\Worksheet.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
          ExcelWrapper.vcxproj -> C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.dll
-     1>Done Building Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.11
+Time Elapsed 00:00:05.55
