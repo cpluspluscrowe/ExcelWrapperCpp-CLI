@@ -3,7 +3,7 @@
 #include "ExcelApplication.h"
 #include "Worksheet.h"
 
-//Workbook
+///Workbook functions
 WorkbookWrapper::Workbook::Workbook(Excel::Application^ xl,System::String^ filePath)
 {
 	this->wrappedWorkbook = xl->Workbooks->Open(filePath, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing);
@@ -17,9 +17,12 @@ WorkbookWrapper::Workbook::!Workbook(){
 WorkbookWrapper::Workbook::~Workbook(){
 	this->wrappedWorkbook->Close((System::Object^)false, Type::Missing, Type::Missing);
 }
+Excel::Workbook^ WorkbookWrapper::Workbook::GetWrappedWorkbook(){
+	return this->wrappedWorkbook;
+}
 
 
-//Sheets Wrapper
+///Sheets Wrapper functions
 WorkbookWrapper::WorkbookSheetsWrapper::WorkbookSheetsWrapper(Excel::Workbook^ workbook){
 	this->wrappedWorkbook = workbook;
 }

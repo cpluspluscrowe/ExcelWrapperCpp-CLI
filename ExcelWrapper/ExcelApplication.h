@@ -15,6 +15,8 @@ namespace ExcelApplicationWrapper{
 		!ExcelApplication();
 		~ExcelApplication();
 
+		Excel::Application^ GetWrappedExcelApplication();
+
 		/*! will return a WorkbookWrapper::Workbook*/
 		ref class Workbooks{
 		public:

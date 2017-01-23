@@ -21,14 +21,19 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="ExcelApplication"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html#a595051c132abfe4dd9d2b38e5e07327e"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="!ExcelApplication"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html#a3004a063006f8be2d41d31a35e5f7545"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="~ExcelApplication"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html#a06de44c7d5bbb3022531604849c74ecf"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetWrappedExcelApplication"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html#aeda6c047f9daed63f342c0fd074a2b08"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="xl"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html#a2c8b69990a092a3a645ea14fb16b54dd"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="RangeWrapper"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Cells"><param name="Local" value="class_range_wrapper_1_1_cells.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cells"><param name="Local" value="class_range_wrapper_1_1_cells.html#a60560584fe63b17c6cc1045f81313aca"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Range"><param name="Local" value="class_range_wrapper_1_1_range.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Range"><param name="Local" value="class_range_wrapper_1_1_range.html#a6abb0e2686886b5cff2a92c4f2b13a6e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Range"><param name="Local" value="class_range_wrapper_1_1_range.html#a1b115ae79c932c9af88cae890ce4ea9d"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="WorkbookWrapper"><param name="ImageNumber" value="1"></OBJECT>
@@ -38,6 +43,7 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Workbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a3c912e843627d6fde920e313d16047e1"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="!Workbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#acbcdc149054ecc226be589ce91a9e24a"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="~Workbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#ab6764a8ef0d0d8b71f8fc09ccaea84e6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetWrappedWorkbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a49c8dbf1671b694e30a29cd28b7d54a2"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Sheets"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a0f75222149a6f584ecad7c20433723d0"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="WorkbookSheetsWrapper"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html"><param name="ImageNumber" value="1"></OBJECT>
@@ -52,10 +58,29 @@
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Worksheet"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Worksheet"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet.html#a2e80e974c1425e77f3a26e74324c6fab"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GetWrappedWorksheet"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet.html#a7388e6aa4cd8ba9b29b74c253c2375fa"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Range"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet.html#a5fb5df8c6dd989778d0898c235aec39e"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="WorksheetCellsWrapper"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="WorksheetCellsWrapper"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html#a0e607d0856ea0ad37d9ae0039eb73834"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="WorksheetCellsWrapper"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html#a47272e45d9aaca40a3b973720661372d"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="WorksheetRangeWrapper"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="WorksheetRangeWrapper"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html#affa8a3599d52498502d6054b8e100c4c"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="WorksheetRangeWrapper"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html#aecd3df8ab768dd78f126b0bb81446e78"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html#a52c50b0a376449e8119ee8f00d806f13"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html#af33e603a1c3b0f7f3483795dd7629b20"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
   </UL>
 <LI><OBJECT type="text/sitemap"><param name="Name" value="Files"><param name="ImageNumber" value="1"></OBJECT>
   <UL>

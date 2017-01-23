@@ -45,26 +45,56 @@
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_system.html">System</a>;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Microsoft::Office::Interop::Excel</a>;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Excel</a> = <a class="code" href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Microsoft::Office::Interop::Excel</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_worksheet_wrapper.html">WorksheetWrapper</a>{</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_worksheet_wrapper_1_1_worksheet.html">    6</a></span>&#160;    <span class="keyword">ref class</span> <a class="code" href="class_worksheet_wrapper_1_1_worksheet.html">Worksheet</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="class_worksheet_wrapper_1_1_worksheet.html">Worksheet</a>(Excel::Worksheet^ worksheet);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        Excel::Worksheet^ wrappedWorksheet;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Range.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Microsoft::Office::Interop::Excel</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Excel</a> = <a class="code" href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Microsoft::Office::Interop::Excel</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_worksheet_wrapper.html">WorksheetWrapper</a>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html">    8</a></span>&#160;    <span class="keyword">public ref class</span> <a class="code" href="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html">WorksheetRangeWrapper</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html">WorksheetRangeWrapper</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html">WorksheetRangeWrapper</a>(Excel::Worksheet^ worksheet);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_range_wrapper_1_1_range.html">RangeWrapper::Range</a>^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ range1);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_range_wrapper_1_1_range.html">RangeWrapper::Range</a>^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ rangeString1, String^ rangeString2);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        Excel::Worksheet^ wrappedWorksheet;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html">   20</a></span>&#160;    <span class="keyword">public ref class</span> <a class="code" href="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html">WorksheetCellsWrapper</a>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html">WorksheetCellsWrapper</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html">WorksheetCellsWrapper</a>(Excel::Worksheet^ worksheet);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ range1);</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ rangeString1, String^ rangeString2);</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">//Excel::Worksheet^ wrappedWorksheet;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_worksheet_wrapper_1_1_worksheet.html">   32</a></span>&#160;    <span class="keyword">ref class</span> <a class="code" href="class_worksheet_wrapper_1_1_worksheet.html">Worksheet</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_worksheet_wrapper_1_1_worksheet.html">Worksheet</a>(Excel::Worksheet^ worksheet);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        Excel::Worksheet^ GetWrappedWorksheet();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html">WorksheetRangeWrapper</a> Range;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        Excel::Worksheet^ wrappedWorksheet;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="class_worksheet_wrapper_1_1_worksheet_range_wrapper_html"><div class="ttname"><a href="class_worksheet_wrapper_1_1_worksheet_range_wrapper.html">WorksheetWrapper::WorksheetRangeWrapper</a></div><div class="ttdoc">Worksheet.Range wrapper. </div><div class="ttdef"><b>Definition:</b> Worksheet.h:8</div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
-<div class="ttc" id="namespace_worksheet_wrapper_html"><div class="ttname"><a href="namespace_worksheet_wrapper.html">WorksheetWrapper</a></div><div class="ttdef"><b>Definition:</b> Worksheet.h:5</div></div>
+<div class="ttc" id="namespace_worksheet_wrapper_html"><div class="ttname"><a href="namespace_worksheet_wrapper.html">WorksheetWrapper</a></div><div class="ttdef"><b>Definition:</b> Worksheet.h:6</div></div>
 <div class="ttc" id="namespace_microsoft_1_1_office_1_1_interop_1_1_excel_html"><div class="ttname"><a href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Excel</a></div></div>
-<div class="ttc" id="class_worksheet_wrapper_1_1_worksheet_html"><div class="ttname"><a href="class_worksheet_wrapper_1_1_worksheet.html">WorksheetWrapper::Worksheet</a></div><div class="ttdef"><b>Definition:</b> Worksheet.h:6</div></div>
+<div class="ttc" id="class_worksheet_wrapper_1_1_worksheet_cells_wrapper_html"><div class="ttname"><a href="class_worksheet_wrapper_1_1_worksheet_cells_wrapper.html">WorksheetWrapper::WorksheetCellsWrapper</a></div><div class="ttdoc">Worksheet.Cells Wrapper. </div><div class="ttdef"><b>Definition:</b> Worksheet.h:20</div></div>
+<div class="ttc" id="class_range_wrapper_1_1_range_html"><div class="ttname"><a href="class_range_wrapper_1_1_range.html">RangeWrapper::Range</a></div><div class="ttdef"><b>Definition:</b> Range.h:5</div></div>
+<div class="ttc" id="class_worksheet_wrapper_1_1_worksheet_html"><div class="ttname"><a href="class_worksheet_wrapper_1_1_worksheet.html">WorksheetWrapper::Worksheet</a></div><div class="ttdoc">Worksheet Wrapper. </div><div class="ttdef"><b>Definition:</b> Worksheet.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 23 2017 12:00:54 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 23 2017 13:05:24 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

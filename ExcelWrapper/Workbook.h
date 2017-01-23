@@ -8,6 +8,7 @@ namespace Excel = Microsoft::Office::Interop::Excel;
 #include "Worksheet.h"
 
 namespace WorkbookWrapper{
+	///Workbook.Sheets Wrapper
 	public ref class WorkbookSheetsWrapper{
 	public:
 		WorkbookSheetsWrapper(Excel::Workbook^ workbook);
@@ -17,12 +18,16 @@ namespace WorkbookWrapper{
 		Excel::Workbook^ wrappedWorkbook;
 	};
 
+	///Workbook Wrapper
 	public ref class Workbook
 	{
 	public:
 		Workbook(Excel::Application^ xl, System::String^ filePath);
 		!Workbook();
 		~Workbook();
+		
+		Excel::Workbook^ GetWrappedWorkbook();
+
 		WorkbookWrapper::WorkbookSheetsWrapper^ Sheets;
 	private:
 		Excel::Workbook^ wrappedWorkbook;

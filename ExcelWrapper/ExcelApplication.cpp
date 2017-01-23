@@ -19,7 +19,9 @@ ExcelApplicationWrapper::ExcelApplication::!ExcelApplication(){
 ExcelApplicationWrapper::ExcelApplication::Workbooks::Workbooks(Excel::Application^ xl){
 	this->xl = xl;
 }
-
+Excel::Application^ ExcelApplicationWrapper::ExcelApplication::GetWrappedExcelApplication(){
+	return this->xl;
+}
 
 //Workbooks
 WorkbookWrapper::Workbook^ ExcelApplicationWrapper::ExcelApplication::Workbooks::Open(String^ filePath){
