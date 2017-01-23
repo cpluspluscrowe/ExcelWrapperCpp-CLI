@@ -1,4 +1,5 @@
 #pragma once
+using namespace System;
 using namespace Microsoft::Office::Interop::Excel;
 namespace Excel = Microsoft::Office::Interop::Excel;
 namespace RangeWrapper{
@@ -6,14 +7,7 @@ namespace RangeWrapper{
 	{
 	public:
 		Range(Excel::Range^ rng);
-	private:
-		Excel::Range^ wrappedRange;
-	};
-
-	public ref class Cells
-	{
-	public:
-		Cells(Excel::Range^ rng);
+		String^ Value2;
 	private:
 		Excel::Range^ wrappedRange;
 	};

@@ -22,10 +22,9 @@ namespace WorksheetWrapper{
 		WorksheetCellsWrapper();
 		WorksheetCellsWrapper(Excel::Worksheet^ worksheet);
 
-		//RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ range1);
-		//RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ rangeString1, String^ rangeString2);
+		RangeWrapper::Range^ operator()(int row,int column);
 	private:
-		//Excel::Worksheet^ wrappedWorksheet;
+		Excel::Worksheet^ wrappedWorksheet;
 	};
 
 	///Worksheet Wrapper
