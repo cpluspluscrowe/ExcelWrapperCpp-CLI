@@ -13,12 +13,22 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html"><param name="Name" value="ExcelApplicationWrapper::ExcelApplication"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application_1_1_workbooks.html#a41d20bfb1f86751db5ff99141663f99d"><param name="Name" value="Open"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html#ab5a424591410a7edf0c4af773a0084c4"><param name="Name" value="operator[]"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_range_wrapper_1_1_range.html"><param name="Name" value="RangeWrapper::Range"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a0f75222149a6f584ecad7c20433723d0"><param name="Name" value="Sheets"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a3c912e843627d6fde920e313d16047e1"><param name="Name" value="Workbook"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application_1_1_workbooks.html#a8f3d2108eecffc9a17e348326149ecbd"><param name="Name" value="Workbooks"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html#a4e3774e38d74a6426fe398d6caa99d8b"><param name="Name" value="WorkbookSheetsWrapper"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html"><param name="Name" value="WorkbookWrapper::Workbook"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook_1_1_sheets.html"><param name="Name" value="WorkbookWrapper::Workbook::Sheets"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html"><param name="Name" value="WorkbookWrapper::Workbook"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a0f75222149a6f584ecad7c20433723d0"><param name="Name" value="Sheets"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a3c912e843627d6fde920e313d16047e1"><param name="Name" value="Workbook"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html"><param name="Name" value="WorkbookWrapper::WorkbookSheetsWrapper"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html#ab5a424591410a7edf0c4af773a0084c4"><param name="Name" value="operator[]"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html#a4e3774e38d74a6426fe398d6caa99d8b"><param name="Name" value="WorkbookSheetsWrapper"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet.html#a2e80e974c1425e77f3a26e74324c6fab"><param name="Name" value="Worksheet"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_worksheet_wrapper_1_1_worksheet.html"><param name="Name" value="WorksheetWrapper::Worksheet"></OBJECT>
   <UL>

@@ -35,10 +35,16 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Workbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Sheets"><param name="Local" value="class_workbook_wrapper_1_1_workbook_1_1_sheets.html"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Workbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a3c912e843627d6fde920e313d16047e1"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="!Workbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#acbcdc149054ecc226be589ce91a9e24a"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="~Workbook"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#ab6764a8ef0d0d8b71f8fc09ccaea84e6"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Sheets"><param name="Local" value="class_workbook_wrapper_1_1_workbook.html#a0f75222149a6f584ecad7c20433723d0"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="WorkbookSheetsWrapper"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="WorkbookSheetsWrapper"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html#a4e3774e38d74a6426fe398d6caa99d8b"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator[]"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html#ab5a424591410a7edf0c4af773a0084c4"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator[]"><param name="Local" value="class_workbook_wrapper_1_1_workbook_sheets_wrapper.html#a5472f7eaa77a4f40dcda1147b9b7bda9"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="WorksheetWrapper"><param name="ImageNumber" value="1"></OBJECT>

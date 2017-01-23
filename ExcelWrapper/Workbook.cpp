@@ -7,9 +7,7 @@
 WorkbookWrapper::Workbook::Workbook(Excel::Application^ xl,System::String^ filePath)
 {
 	this->wrappedWorkbook = xl->Workbooks->Open(filePath, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing);
-	for each(Excel::Worksheet^ worksheet in this->wrappedWorkbook->Sheets){
-		this->worksheetDict.Add(worksheet->Name, gcnew WorksheetWrapper::Worksheet(worksheet));
-	}
+	this->Sheets = gcnew WorkbookWrapper::WorkbookSheetsWrapper(this->wrappedWorkbook);
 }
 
 WorkbookWrapper::Workbook::!Workbook(){
@@ -20,7 +18,15 @@ WorkbookWrapper::Workbook::~Workbook(){
 	this->wrappedWorkbook->Close((System::Object^)false, Type::Missing, Type::Missing);
 }
 
-//Sheets
-//WorkbookWrapper::Workbook::Sheets::Sheets(System::String^ sheetName){
-//	WorksheetWrapper::Worksheet^ ws = gcnew WorksheetWrapper::Worksheet();
-//}
+
+//Sheets Wrapper
+WorkbookWrapper::WorkbookSheetsWrapper::WorkbookSheetsWrapper(Excel::Workbook^ workbook){
+	this->wrappedWorkbook = workbook;
+}
+
+WorksheetWrapper::Worksheet^ WorkbookWrapper::WorkbookSheetsWrapper::operator [](String^ worksheetName){
+	return static_cast<WorksheetWrapper::Worksheet^>(gcnew WorksheetWrapper::Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets[worksheetName])));
+}
+WorksheetWrapper::Worksheet^ WorkbookWrapper::WorkbookSheetsWrapper::operator [](int worksheetNumber){
+	return static_cast<WorksheetWrapper::Worksheet^>(gcnew WorksheetWrapper::Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets[worksheetNumber])));
+}
