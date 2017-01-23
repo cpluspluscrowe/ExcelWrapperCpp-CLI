@@ -6,4 +6,4 @@ Started on 1/23/2017.  Those who've used C++/CLI's Microsoft::Office::Interop::E
   
   This wrapper is meant to act and look just like the C# implementation.
   
-    When I haven't updated something yet, you will find that the wrapper gives you public access to the raw Excel object.
+  When I haven't updated something yet, you will find that the wrapper gives you public access to the raw Excel object.
