@@ -11,47 +11,55 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Assembly Interop.Microsoft.Office.Interop.Excel.1.8, Version=1.8.*, Culture=Invariant Language (Invariant Country): 
 	hash=None, flags=None
-Class RangeWrapper.Range: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class ExcelApplicationWrapper.Range: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Range): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.String Value2 : Public
-Class WorksheetWrapper.WorksheetRangeWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class ExcelApplicationWrapper.WorksheetRangeWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     op_FunctionCall(String, String): PrivateScope, Public, HideBySig, SpecialName
     op_FunctionCall(String): PrivateScope, Public, HideBySig, SpecialName
-Class WorksheetWrapper.WorksheetCellsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class ExcelApplicationWrapper.WorksheetCellsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     op_FunctionCall(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName
-Class WorkbookWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ExcelApplicationWrapper.WorksheetRangeWrapper Range IsByValue : Public, InitOnly
+  Methods:
+    GetWrappedWorksheet(): PrivateScope, Public, HideBySig
+Class ExcelApplicationWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Workbook): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     op_Subscript(Int32): PrivateScope, Public, HideBySig, SpecialName
     op_Subscript(String): PrivateScope, Public, HideBySig, SpecialName
-Class WorkbookWrapper.Workbook: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class ExcelApplicationWrapper.Workbook: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Application, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
     System.IDisposable
   Fields:
-    WorkbookWrapper.WorkbookSheetsWrapper Sheets : Public
+    ExcelApplicationWrapper.WorkbookSheetsWrapper Sheets : Public
   Methods:
     GetWrappedWorkbook(): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ExcelApplicationWrapper.Workbooks: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Office.Interop.Excel.Application): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Microsoft.Office.Interop.Excel.Application xl : Public
+  Methods:
+    Open(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, HideBySig
+    Open(String): PrivateScope, Public, HideBySig
 Class ExcelApplicationWrapper.ExcelApplication: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
     System.IDisposable
   Fields:
     Microsoft.Office.Interop.Excel.Application xl : Public
+    ExcelApplicationWrapper.Workbooks Workbooks : Public
   Methods:
     GetWrappedExcelApplication(): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
-Class ExcelApplicationWrapper.ExcelApplication+Workbooks: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
-    Void .ctor(Microsoft.Office.Interop.Excel.Application): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    Microsoft.Office.Interop.Excel.Application xl : Public
-  Methods:
-    Open(String): PrivateScope, Public, HideBySig

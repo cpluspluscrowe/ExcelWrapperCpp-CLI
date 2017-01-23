@@ -7,6 +7,15 @@ using namespace System;
 #include "Workbook.h"
 
 namespace ExcelApplicationWrapper{
+	/*! will return a WorkbookWrapper::Workbook*/
+	public ref class Workbooks{
+	public:
+		Excel::Application^ xl;
+		Workbooks(Excel::Application^ xl);
+		ExcelApplicationWrapper::Workbook^ Open(System::String^ filePath);
+		ExcelApplicationWrapper::Workbook^ Open(std::string filePath);
+	};
+
 	public ref class ExcelApplication
 	{
 	public:
@@ -17,12 +26,6 @@ namespace ExcelApplicationWrapper{
 
 		Excel::Application^ GetWrappedExcelApplication();
 
-		/*! will return a WorkbookWrapper::Workbook*/
-		ref class Workbooks{
-		public:
-			Excel::Application^ xl;
-			Workbooks(Excel::Application^ xl);
-			WorkbookWrapper::Workbook^ Open(System::String^ filePath);
-		};
+		ExcelApplicationWrapper::Workbooks^ Workbooks;
 	};
 }

@@ -2,7 +2,7 @@
 using namespace System;
 using namespace Microsoft::Office::Interop::Excel;
 namespace Excel = Microsoft::Office::Interop::Excel;
-namespace RangeWrapper{
+namespace ExcelApplicationWrapper{
 	public ref class Range
 	{
 	public:

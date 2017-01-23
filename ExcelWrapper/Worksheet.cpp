@@ -3,39 +3,39 @@
 #include "Range.h"
 
 //Worksheet Wrapper
-WorksheetWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
+ExcelApplicationWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
 {
 	this->wrappedWorksheet = worksheet;
 }
 
-Excel::Worksheet^ WorksheetWrapper::Worksheet::GetWrappedWorksheet(){
+Excel::Worksheet^ ExcelApplicationWrapper::Worksheet::GetWrappedWorksheet(){
 	return this->wrappedWorksheet;
 }
 
 
 //Worksheet.Range Wrapper
-WorksheetWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(){
+ExcelApplicationWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(){
 
 }
 
-WorksheetWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(Excel::Worksheet^ worksheet){
+ExcelApplicationWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(Excel::Worksheet^ worksheet){
 
 }
 
-RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ rangeString){
-	return gcnew RangeWrapper::Range(this->wrappedWorksheet->Range[rangeString, Type::Missing]);
+ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetRangeWrapper::operator()(String^ rangeString){
+	return gcnew ExcelApplicationWrapper::Range(this->wrappedWorksheet->Range[rangeString, Type::Missing]);
 }
-RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ rangeString1,String^ rangeString2){
-	return gcnew RangeWrapper::Range(this->wrappedWorksheet->Range[rangeString1, rangeString2]);
+ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetRangeWrapper::operator()(String^ rangeString1, String^ rangeString2){
+	return gcnew ExcelApplicationWrapper::Range(this->wrappedWorksheet->Range[rangeString1, rangeString2]);
 }
 
 //Worksheet.Cells Wrapper
-WorksheetWrapper::WorksheetCellsWrapper::WorksheetCellsWrapper(){
+ExcelApplicationWrapper::WorksheetCellsWrapper::WorksheetCellsWrapper(){
 
 }
-WorksheetWrapper::WorksheetCellsWrapper::WorksheetCellsWrapper(Excel::Worksheet^ worksheet){
+ExcelApplicationWrapper::WorksheetCellsWrapper::WorksheetCellsWrapper(Excel::Worksheet^ worksheet){
 	this->wrappedWorksheet = worksheet;
 }
-RangeWrapper::Range^ WorksheetWrapper::WorksheetCellsWrapper::operator()(int row, int column){
-	return gcnew RangeWrapper::Range(static_cast<Excel::Range^>(this->wrappedWorksheet->Cells[row, column]));
+ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetCellsWrapper::operator()(int row, int column){
+	return gcnew ExcelApplicationWrapper::Range(static_cast<Excel::Range^>(this->wrappedWorksheet->Cells[row, column]));
 }

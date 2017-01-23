@@ -3,15 +3,16 @@
 using namespace System;
 using namespace Microsoft::Office::Interop::Excel;
 namespace Excel = Microsoft::Office::Interop::Excel;
-namespace WorksheetWrapper{
+
+namespace ExcelApplicationWrapper{
 	///Worksheet.Range wrapper
 	public ref class WorksheetRangeWrapper{
 	public:
 		WorksheetRangeWrapper();
 		WorksheetRangeWrapper(Excel::Worksheet^ worksheet);
 
-		RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ range1);
-		RangeWrapper::Range^ WorksheetWrapper::WorksheetRangeWrapper::operator()(String^ rangeString1, String^ rangeString2);
+		ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetRangeWrapper::operator()(String^ range1);
+		ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetRangeWrapper::operator()(String^ rangeString1, String^ rangeString2);
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
 	};
@@ -22,13 +23,13 @@ namespace WorksheetWrapper{
 		WorksheetCellsWrapper();
 		WorksheetCellsWrapper(Excel::Worksheet^ worksheet);
 
-		RangeWrapper::Range^ operator()(int row,int column);
+		ExcelApplicationWrapper::Range^ operator()(int row, int column);
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
 	};
 
 	///Worksheet Wrapper
-	ref class Worksheet
+	public ref class Worksheet
 	{
 	public:
 		Worksheet(Excel::Worksheet^ worksheet);
@@ -36,6 +37,7 @@ namespace WorksheetWrapper{
 		Excel::Worksheet^ GetWrappedWorksheet();
 
 		WorksheetRangeWrapper Range;
+		WorksheetCellsWrapper Cells;
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
 	};

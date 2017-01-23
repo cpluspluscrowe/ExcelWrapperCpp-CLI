@@ -6,9 +6,10 @@
 
 //ExcelApplication
 ExcelApplicationWrapper::ExcelApplication::ExcelApplication(){
-	Excel::Application^ xl = gcnew Excel::Application();
+	Excel::Application^ xl = gcnew Application();
 	xl->Visible = true;
 	this->xl = xl;
+	this->Workbooks = gcnew ExcelApplicationWrapper::Workbooks(this->xl);
 }
 ExcelApplicationWrapper::ExcelApplication::~ExcelApplication(){
 	this->xl->Quit();
@@ -16,15 +17,20 @@ ExcelApplicationWrapper::ExcelApplication::~ExcelApplication(){
 ExcelApplicationWrapper::ExcelApplication::!ExcelApplication(){
 	this->xl->Quit();
 }
-ExcelApplicationWrapper::ExcelApplication::Workbooks::Workbooks(Excel::Application^ xl){
-	this->xl = xl;
-}
 Excel::Application^ ExcelApplicationWrapper::ExcelApplication::GetWrappedExcelApplication(){
 	return this->xl;
 }
 
 //Workbooks
-WorkbookWrapper::Workbook^ ExcelApplicationWrapper::ExcelApplication::Workbooks::Open(String^ filePath){
-	WorkbookWrapper::Workbook^ wb = gcnew WorkbookWrapper::Workbook(this->xl, filePath);
+ExcelApplicationWrapper::Workbook^ ExcelApplicationWrapper::Workbooks::Open(String^ filePath){
+	ExcelApplicationWrapper::Workbook^ wb = gcnew ExcelApplicationWrapper::Workbook(this->xl, filePath);
 	return wb;
+}
+ExcelApplicationWrapper::Workbook^ ExcelApplicationWrapper::Workbooks::Open(std::string filePath){
+	String^ convertedFilePath = gcnew String(filePath.c_str());
+	ExcelApplicationWrapper::Workbook^ wb = gcnew ExcelApplicationWrapper::Workbook(this->xl, convertedFilePath);
+	return wb;
+}
+ExcelApplicationWrapper::Workbooks::Workbooks(Excel::Application^ xl){
+	this->xl = xl;
 }

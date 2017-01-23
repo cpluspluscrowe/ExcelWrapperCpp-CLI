@@ -3,6 +3,13 @@
 #include "Range.h"
 
 ///Range Wrapper Code
-RangeWrapper::Range::Range(Excel::Range^ rng){
+ExcelApplicationWrapper::Range::Range(Excel::Range^ rng){
 	this->wrappedRange = rng;
+	auto rngVal = rng->Value2;
+	if (rngVal == nullptr){
+		rngVal = "";
+	}
+	else{
+		rngVal = rngVal->ToString();
+	}
 }

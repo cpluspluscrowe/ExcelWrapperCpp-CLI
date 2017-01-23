@@ -4,32 +4,32 @@
 #include "Worksheet.h"
 
 ///Workbook functions
-WorkbookWrapper::Workbook::Workbook(Excel::Application^ xl,System::String^ filePath)
+ExcelApplicationWrapper::Workbook::Workbook(Excel::Application^ xl, System::String^ filePath)
 {
 	this->wrappedWorkbook = xl->Workbooks->Open(filePath, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing);
-	this->Sheets = gcnew WorkbookWrapper::WorkbookSheetsWrapper(this->wrappedWorkbook);
+	this->Sheets = gcnew ExcelApplicationWrapper::WorkbookSheetsWrapper(this->wrappedWorkbook);
 }
 
-WorkbookWrapper::Workbook::!Workbook(){
+ExcelApplicationWrapper::Workbook::!Workbook(){
 	this->wrappedWorkbook->Close((System::Object^)false, Type::Missing, Type::Missing);
 }
 
-WorkbookWrapper::Workbook::~Workbook(){
+ExcelApplicationWrapper::Workbook::~Workbook(){
 	this->wrappedWorkbook->Close((System::Object^)false, Type::Missing, Type::Missing);
 }
-Excel::Workbook^ WorkbookWrapper::Workbook::GetWrappedWorkbook(){
+Excel::Workbook^ ExcelApplicationWrapper::Workbook::GetWrappedWorkbook(){
 	return this->wrappedWorkbook;
 }
 
 
 ///Sheets Wrapper functions
-WorkbookWrapper::WorkbookSheetsWrapper::WorkbookSheetsWrapper(Excel::Workbook^ workbook){
+ExcelApplicationWrapper::WorkbookSheetsWrapper::WorkbookSheetsWrapper(Excel::Workbook^ workbook){
 	this->wrappedWorkbook = workbook;
 }
 
-WorksheetWrapper::Worksheet^ WorkbookWrapper::WorkbookSheetsWrapper::operator [](String^ worksheetName){
-	return static_cast<WorksheetWrapper::Worksheet^>(gcnew WorksheetWrapper::Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets[worksheetName])));
+ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::operator [](String^ worksheetName){
+	return static_cast<ExcelApplicationWrapper::Worksheet^>(gcnew ExcelApplicationWrapper::Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets[worksheetName])));
 }
-WorksheetWrapper::Worksheet^ WorkbookWrapper::WorkbookSheetsWrapper::operator [](int worksheetNumber){
-	return static_cast<WorksheetWrapper::Worksheet^>(gcnew WorksheetWrapper::Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets[worksheetNumber])));
+ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::operator [](int worksheetNumber){
+	return static_cast<ExcelApplicationWrapper::Worksheet^>(gcnew ExcelApplicationWrapper::Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets[worksheetNumber])));
 }

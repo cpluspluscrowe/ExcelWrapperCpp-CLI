@@ -7,13 +7,13 @@ namespace Excel = Microsoft::Office::Interop::Excel;
 #include <memory>
 #include "Worksheet.h"
 
-namespace WorkbookWrapper{
+namespace ExcelApplicationWrapper{
 	///Workbook.Sheets Wrapper
 	public ref class WorkbookSheetsWrapper{
 	public:
 		WorkbookSheetsWrapper(Excel::Workbook^ workbook);
-		WorksheetWrapper::Worksheet^ WorkbookWrapper::WorkbookSheetsWrapper::operator [](String^ worksheetName);
-		WorksheetWrapper::Worksheet^ WorkbookWrapper::WorkbookSheetsWrapper::operator [](int worksheetNumber);
+		ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::operator [](String^ worksheetName);
+		ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::operator [](int worksheetNumber);
 	private:
 		Excel::Workbook^ wrappedWorkbook;
 	};
@@ -28,10 +28,10 @@ namespace WorkbookWrapper{
 		
 		Excel::Workbook^ GetWrappedWorkbook();
 
-		WorkbookWrapper::WorkbookSheetsWrapper^ Sheets;
+		ExcelApplicationWrapper::WorkbookSheetsWrapper^ Sheets;
 	private:
 		Excel::Workbook^ wrappedWorkbook;
-		Dictionary<String^, WorksheetWrapper::Worksheet^> worksheetNameDict;
-		Dictionary<int, WorksheetWrapper::Worksheet^> worksheetIntDict;
+		Dictionary<String^, ExcelApplicationWrapper::Worksheet^> worksheetNameDict;
+		Dictionary<int, ExcelApplicationWrapper::Worksheet^> worksheetIntDict;
 	};
 }
