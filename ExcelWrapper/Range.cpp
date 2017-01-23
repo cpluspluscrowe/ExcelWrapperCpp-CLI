@@ -7,9 +7,9 @@ ExcelApplicationWrapper::Range::Range(Excel::Range^ rng){
 	this->wrappedRange = rng;
 	auto rngVal = rng->Value2;
 	if (rngVal == nullptr){
-		rngVal = "";
+		this->Value2 = "nullptr";
 	}
 	else{
-		rngVal = rngVal->ToString();
+		this->Value2 = rngVal->ToString();
 	}
 }

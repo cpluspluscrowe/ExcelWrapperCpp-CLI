@@ -29,7 +29,8 @@ Class ExcelApplicationWrapper.WorksheetCellsWrapper: AutoLayout, AnsiClass, Clas
 Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    ExcelApplicationWrapper.WorksheetRangeWrapper Range IsByValue : Public, InitOnly
+    ExcelApplicationWrapper.WorksheetRangeWrapper Range : Public
+    ExcelApplicationWrapper.WorksheetCellsWrapper Cells : Public
   Methods:
     GetWrappedWorksheet(): PrivateScope, Public, HideBySig
 Class ExcelApplicationWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

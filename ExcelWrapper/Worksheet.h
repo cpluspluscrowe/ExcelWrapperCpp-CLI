@@ -36,8 +36,8 @@ namespace ExcelApplicationWrapper{
 
 		Excel::Worksheet^ GetWrappedWorksheet();
 
-		WorksheetRangeWrapper Range;
-		WorksheetCellsWrapper Cells;
+		WorksheetRangeWrapper^ Range;
+		WorksheetCellsWrapper^ Cells;
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
 	};

@@ -6,6 +6,8 @@
 ExcelApplicationWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
 {
 	this->wrappedWorksheet = worksheet;
+	this->Range = gcnew WorksheetRangeWrapper(worksheet);
+	this->Cells = gcnew WorksheetCellsWrapper(worksheet);
 }
 
 Excel::Worksheet^ ExcelApplicationWrapper::Worksheet::GetWrappedWorksheet(){
@@ -19,7 +21,7 @@ ExcelApplicationWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(){
 }
 
 ExcelApplicationWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(Excel::Worksheet^ worksheet){
-
+	this->wrappedWorksheet = worksheet;
 }
 
 ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetRangeWrapper::operator()(String^ rangeString){

@@ -9,6 +9,6 @@ namespace ExcelApplicationWrapper{
 		Range(Excel::Range^ rng);
 		String^ Value2;
 	private:
-		Excel::Range^ wrappedRange;
+		Excel::Range^ wrappedRange; 
 	};
 }
