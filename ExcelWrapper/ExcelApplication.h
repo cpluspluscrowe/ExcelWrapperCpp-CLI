@@ -9,13 +9,18 @@ using namespace System;
 namespace ExcelApplicationWrapper{
 	public ref class ExcelApplication
 	{
+	public:
 		Excel::Application^ xl;
 		ExcelApplication();
 		!ExcelApplication();
 		~ExcelApplication();
 
+		/*! will return a WorkbookWrapper::Workbook*/
 		ref class Workbooks{
-			WorkbookWrapper::Workbook^ Open(String^ filePath);
+		public:
+			Excel::Application^ xl;
+			Workbooks(Excel::Application^ xl);
+			WorkbookWrapper::Workbook^ Open(System::String^ filePath);
 		};
 	};
 }

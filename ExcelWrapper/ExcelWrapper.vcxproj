@@ -77,18 +77,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExcelApplication.h" />
+    <ClInclude Include="Range.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="Workbook.h" />
+    <ClInclude Include="Worksheet.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ExcelApplication.cpp" />
+    <ClCompile Include="Range.cpp" />
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Workbook.cpp" />
+    <ClCompile Include="Worksheet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
