@@ -15,6 +15,19 @@ Class ExcelApplicationWrapper.Range: AutoLayout, AnsiClass, Class, Public, Befor
     Void .ctor(Microsoft.Office.Interop.Excel.Range): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.String Value2 : Public
+    CppValue* cppValue2 : Public
+  Methods:
+    GetCppValue(): PrivateScope, Public, HideBySig
+Class ExcelApplicationWrapper.RowsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Count : Public
+Class ExcelApplicationWrapper.WorksheetUsedRangeWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ExcelApplicationWrapper.RowsWrapper Rows : Public
 Class ExcelApplicationWrapper.WorksheetRangeWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -31,6 +44,7 @@ Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, B
   Fields:
     ExcelApplicationWrapper.WorksheetRangeWrapper Range : Public
     ExcelApplicationWrapper.WorksheetCellsWrapper Cells : Public
+    ExcelApplicationWrapper.WorksheetUsedRangeWrapper UsedRange : Public
   Methods:
     GetWrappedWorksheet(): PrivateScope, Public, HideBySig
 Class ExcelApplicationWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -64,3 +78,5 @@ Class ExcelApplicationWrapper.ExcelApplication: AutoLayout, AnsiClass, Class, Pu
   Methods:
     GetWrappedExcelApplication(): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct CppValue: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType

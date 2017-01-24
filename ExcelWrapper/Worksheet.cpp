@@ -8,6 +8,7 @@ ExcelApplicationWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
 	this->wrappedWorksheet = worksheet;
 	this->Range = gcnew WorksheetRangeWrapper(worksheet);
 	this->Cells = gcnew WorksheetCellsWrapper(worksheet);
+	this->UsedRange = gcnew WorksheetUsedRangeWrapper(worksheet);
 }
 
 Excel::Worksheet^ ExcelApplicationWrapper::Worksheet::GetWrappedWorksheet(){
@@ -40,4 +41,19 @@ ExcelApplicationWrapper::WorksheetCellsWrapper::WorksheetCellsWrapper(Excel::Wor
 }
 ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetCellsWrapper::operator()(int row, int column){
 	return gcnew ExcelApplicationWrapper::Range(static_cast<Excel::Range^>(this->wrappedWorksheet->Cells[row, column]));
+}
+//UsedRangeWrapper
+ExcelApplicationWrapper::WorksheetUsedRangeWrapper::WorksheetUsedRangeWrapper(){
+
+}
+ExcelApplicationWrapper::WorksheetUsedRangeWrapper::WorksheetUsedRangeWrapper(Excel::Worksheet^ worksheet){
+	this->wrappedWorksheet = worksheet;
+	this->Rows = gcnew RowsWrapper(worksheet);
+}
+//RowsWrapper
+ExcelApplicationWrapper::RowsWrapper::RowsWrapper(){
+	this->Count = this->wrappedWorksheet->UsedRange->Rows->Count;
+}
+ExcelApplicationWrapper::RowsWrapper::RowsWrapper(Excel::Worksheet^ worksheet){
+	this->wrappedWorksheet = worksheet;
 }

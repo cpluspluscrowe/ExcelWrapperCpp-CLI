@@ -5,6 +5,27 @@ using namespace Microsoft::Office::Interop::Excel;
 namespace Excel = Microsoft::Office::Interop::Excel;
 
 namespace ExcelApplicationWrapper{
+
+	public ref class RowsWrapper{
+	public:
+		RowsWrapper();
+		RowsWrapper(Excel::Worksheet^ worksheet);
+
+		int Count;
+	private:
+		Excel::Worksheet^ wrappedWorksheet;
+	};
+
+	public ref class WorksheetUsedRangeWrapper{
+	public:
+		WorksheetUsedRangeWrapper();
+		WorksheetUsedRangeWrapper(Excel::Worksheet^ worksheet);
+
+		RowsWrapper^ Rows;
+	private:
+		Excel::Worksheet^ wrappedWorksheet;
+	};
+
 	///Worksheet.Range wrapper
 	public ref class WorksheetRangeWrapper{
 	public:
@@ -38,6 +59,7 @@ namespace ExcelApplicationWrapper{
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;
+		WorksheetUsedRangeWrapper^ UsedRange;
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
 	};
