@@ -6,7 +6,7 @@ namespace Excel = Microsoft::Office::Interop::Excel;
 
 namespace ExcelApplicationWrapper{
 
-	public ref class RowsWrapper{
+	public ref class RowsWrapper sealed{
 	public:
 		RowsWrapper();
 		RowsWrapper(Excel::Worksheet^ worksheet);
@@ -16,9 +16,8 @@ namespace ExcelApplicationWrapper{
 		Excel::Worksheet^ wrappedWorksheet;
 	};
 
-	public ref class WorksheetUsedRangeWrapper{
+	public ref class WorksheetUsedRangeWrapper sealed{
 	public:
-		WorksheetUsedRangeWrapper();
 		WorksheetUsedRangeWrapper(Excel::Worksheet^ worksheet);
 
 		RowsWrapper^ Rows;
@@ -29,7 +28,6 @@ namespace ExcelApplicationWrapper{
 	///Worksheet.Range wrapper
 	public ref class WorksheetRangeWrapper{
 	public:
-		WorksheetRangeWrapper();
 		WorksheetRangeWrapper(Excel::Worksheet^ worksheet);
 
 		ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetRangeWrapper::operator()(String^ range1);
@@ -41,7 +39,6 @@ namespace ExcelApplicationWrapper{
 	///Worksheet.Cells Wrapper
 	public ref class WorksheetCellsWrapper{
 	public:
-		WorksheetCellsWrapper();
 		WorksheetCellsWrapper(Excel::Worksheet^ worksheet);
 
 		ExcelApplicationWrapper::Range^ operator()(int row, int column);
@@ -56,6 +53,8 @@ namespace ExcelApplicationWrapper{
 		Worksheet(Excel::Worksheet^ worksheet);
 
 		Excel::Worksheet^ GetWrappedWorksheet();
+		int GetLastRowInColumn(int columnNumber);
+		int GetLastRowInColumn(String^ columnLetter);
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;

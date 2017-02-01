@@ -33,7 +33,7 @@
     <ClInclude Include="Range.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CppValue.h">
+    <ClInclude Include="Native.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,7 +56,7 @@
     <ClCompile Include="Range.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CppValue.cpp">
+    <ClCompile Include="Native.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -33,3 +33,23 @@ ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapp
 ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::operator [](int worksheetNumber){
 	return static_cast<ExcelApplicationWrapper::Worksheet^>(gcnew ExcelApplicationWrapper::Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets[worksheetNumber])));
 }
+bool ExcelApplicationWrapper::Workbook::Save(){
+	try{
+		this->wrappedWorkbook->Save();
+		return true;
+	}
+	catch (int e){
+		throw std::exception("Failed to save");
+	}
+	return false;
+}
+bool ExcelApplicationWrapper::Workbook::Close(bool saveIt){
+	try{
+		this->wrappedWorkbook->Close((System::Object^)saveIt, Type::Missing, Type::Missing);
+		return true;
+	}
+	catch (int e){
+		throw std::exception("Failed to close");
+	}
+	return false;
+}

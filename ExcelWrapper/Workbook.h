@@ -27,6 +27,8 @@ namespace ExcelApplicationWrapper{
 		~Workbook();
 		
 		Excel::Workbook^ GetWrappedWorkbook();
+		bool Save();
+		bool Close(bool saveIt);
 
 		ExcelApplicationWrapper::WorkbookSheetsWrapper^ Sheets;
 	private:
