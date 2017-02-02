@@ -41,25 +41,23 @@ ExcelApplicationWrapper::Range^ ExcelApplicationWrapper::WorksheetCellsWrapper::
 ExcelApplicationWrapper::WorksheetUsedRangeWrapper::WorksheetUsedRangeWrapper(Excel::Worksheet^ worksheet){
 	this->wrappedWorksheet = worksheet;
 	this->Rows = gcnew RowsWrapper(worksheet);
+	this->Rows->Count = this->wrappedWorksheet->UsedRange->Rows->Count;
 }
 //RowsWrapper
-ExcelApplicationWrapper::RowsWrapper::RowsWrapper(){
-	this->Count = this->wrappedWorksheet->UsedRange->Rows->Count;
-}
 ExcelApplicationWrapper::RowsWrapper::RowsWrapper(Excel::Worksheet^ worksheet){
 	this->wrappedWorksheet = worksheet;
 }
 
 int ExcelApplicationWrapper::Worksheet::GetLastRowInColumn(int columnNumber){
-	int lastRow = this->wrappedWorksheet->UsedRange->Rows->Count;
-	while (lastRow > 2 && this->Cells(lastRow, columnNumber)->IsNull()){
+	int lastRow = this->UsedRange->Rows->Count;
+	while (lastRow > 1 && this->Cells(lastRow, columnNumber)->IsNull()){
 		lastRow -= 1;
 	}
 	return lastRow;
 }
 int ExcelApplicationWrapper::Worksheet::GetLastRowInColumn(String^ columnLetter){
-	int lastRow = this->wrappedWorksheet->UsedRange->Rows->Count;
-	while (lastRow > 2 && this->Range(columnLetter + lastRow.ToString())->IsNull()){
+	int lastRow = this->UsedRange->Rows->Count;
+	while (lastRow > 1 && this->Range(columnLetter + lastRow.ToString())->IsNull()){
 		lastRow -= 1;
 	}
 	return lastRow;

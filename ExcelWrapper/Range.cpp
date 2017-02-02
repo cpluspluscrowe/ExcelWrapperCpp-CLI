@@ -6,18 +6,24 @@
 ExcelApplicationWrapper::Range::Range(Excel::Range^ rng){
 	this->wrappedRange = rng;
 	double doubleValue;
-	if (rng->Count == 1){
-		auto isDouble = System::Double::TryParse(rng->Value2->ToString(),doubleValue);
-		if (isDouble){
-			this->dValue = doubleValue;
-			this->native = new Native(doubleValue);
+	if (rng->Value2 != nullptr){
+		if (rng->Count == 1){
+			auto isDouble = System::Double::TryParse(rng->Value2->ToString(), doubleValue);
+			if (isDouble){
+				this->dValue = doubleValue;
+				this->native = new Native(doubleValue);
+			}
+			else{
+				this->sValue = rng->Value2->ToString();
+				msclr::interop::marshal_context context;
+				std::string cellValue2 = context.marshal_as<std::string>(this->sValue);
+				this->native = new Native(cellValue2);//initializes as a string
+			}
 		}
-		else{
-			this->sValue = rng->Value2->ToString();
-			msclr::interop::marshal_context context;
-			std::string cellValue2 = context.marshal_as<std::string>(this->sValue);
-			this->native = new Native(cellValue2);//initializes as a string
-		}
+	}
+	else{
+		this->sValue = nullptr;
+		this->dValue = nullptr;
 	}
 }
 
@@ -44,6 +50,10 @@ bool ExcelApplicationWrapper::Range::IsNull(){
 	else{
 		return false;
 	}
+}
+
+Excel::Range^ ExcelApplicationWrapper::Range::GetWrappedRange(){
+	return this->wrappedRange;
 }
 
 void ExcelApplicationWrapper::Range::SetValue(int value2PutInCell){

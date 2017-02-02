@@ -8,7 +8,6 @@ namespace ExcelApplicationWrapper{
 
 	public ref class RowsWrapper sealed{
 	public:
-		RowsWrapper();
 		RowsWrapper(Excel::Worksheet^ worksheet);
 
 		int Count;

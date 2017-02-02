@@ -13,30 +13,30 @@ Assembly Interop.Microsoft.Office.Interop.Excel.1.8, Version=1.8.*, Culture=Inva
 	hash=None, flags=None
 Class ExcelApplicationWrapper.Range: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Range): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.String Value2 : Public
-    CppValue* cppValue2 : Public
   Methods:
-    GetCppValue(): PrivateScope, Public, HideBySig
-Class ExcelApplicationWrapper.RowsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    GetNative(): PrivateScope, Public, HideBySig
+    IsNull(): PrivateScope, Public, HideBySig
+    GetString(): PrivateScope, Public, HideBySig
+    GetDouble(): PrivateScope, Public, HideBySig
+    SetValue(String): PrivateScope, Public, HideBySig
+    SetValue(Double): PrivateScope, Public, HideBySig
+    SetValue(Int32): PrivateScope, Public, HideBySig
+    GetWrappedRange(): PrivateScope, Public, HideBySig
+Class ExcelApplicationWrapper.RowsWrapper: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 Count : Public
-Class ExcelApplicationWrapper.WorksheetUsedRangeWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class ExcelApplicationWrapper.WorksheetUsedRangeWrapper: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     ExcelApplicationWrapper.RowsWrapper Rows : Public
 Class ExcelApplicationWrapper.WorksheetRangeWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     op_FunctionCall(String, String): PrivateScope, Public, HideBySig, SpecialName
     op_FunctionCall(String): PrivateScope, Public, HideBySig, SpecialName
 Class ExcelApplicationWrapper.WorksheetCellsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     op_FunctionCall(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName
 Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -47,6 +47,8 @@ Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, B
     ExcelApplicationWrapper.WorksheetUsedRangeWrapper UsedRange : Public
   Methods:
     GetWrappedWorksheet(): PrivateScope, Public, HideBySig
+    GetLastRowInColumn(String): PrivateScope, Public, HideBySig
+    GetLastRowInColumn(Int32): PrivateScope, Public, HideBySig
 Class ExcelApplicationWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Workbook): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
@@ -60,6 +62,8 @@ Class ExcelApplicationWrapper.Workbook: AutoLayout, AnsiClass, Class, Public, Be
     ExcelApplicationWrapper.WorkbookSheetsWrapper Sheets : Public
   Methods:
     GetWrappedWorkbook(): PrivateScope, Public, HideBySig
+    Save(): PrivateScope, Public, HideBySig
+    Close(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
 Class ExcelApplicationWrapper.Workbooks: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Application): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -78,5 +82,5 @@ Class ExcelApplicationWrapper.ExcelApplication: AutoLayout, AnsiClass, Class, Pu
   Methods:
     GetWrappedExcelApplication(): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
-Struct CppValue: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+Struct Native: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType

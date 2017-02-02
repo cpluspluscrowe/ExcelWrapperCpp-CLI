@@ -20,7 +20,7 @@ namespace ExcelApplicationWrapper{
 		void SetValue(int value2PutInCell);
 		void SetValue(double value2PutInCell);
 		void SetValue(System::String^ value2PutInCell);
-
+		Excel::Range^ ExcelApplicationWrapper::Range::GetWrappedRange();
 	private:
 		Excel::Range^ wrappedRange;
 		Native* native;
