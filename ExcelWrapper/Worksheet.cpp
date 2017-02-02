@@ -29,7 +29,7 @@ int ExcelApplicationWrapper::Worksheet::GetLastRowInColumn(String^ columnLetter)
 	}
 	return lastRow;
 }
-bool ExcelApplicationWrapper::Worksheet::IsStringInColumn(String^ stringLooking4,int columnNumber){
+bool ExcelApplicationWrapper::Worksheet::IsStringInColumn(int columnNumber,String^ stringLooking4){
 	for (int i = 1; i <= this->UsedRange->Rows->Count; i++){
 		if (!this->Cells(i, columnNumber)->IsNull()){
 			if (this->Cells(i, columnNumber)->GetString() == stringLooking4){
@@ -39,7 +39,7 @@ bool ExcelApplicationWrapper::Worksheet::IsStringInColumn(String^ stringLooking4
 	}
 	return false;
 }
-bool ExcelApplicationWrapper::Worksheet::IsStringInColumn(String^ stringLooking4, String^ columnLetter){
+bool ExcelApplicationWrapper::Worksheet::IsStringInColumn(String^ columnLetter, String^ stringLooking4){
 	for (int i = 1; i <= this->UsedRange->Rows->Count; i++){
 		if (!this->Range(columnLetter + i.ToString())->IsNull()){
 			if (this->Range(columnLetter + i.ToString())->GetString() == stringLooking4){

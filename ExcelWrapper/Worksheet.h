@@ -54,8 +54,8 @@ namespace ExcelApplicationWrapper{
 		Excel::Worksheet^ GetWrappedWorksheet();
 		int GetLastRowInColumn(int columnNumber);
 		int GetLastRowInColumn(String^ columnLetter);
-		bool IsStringInColumn(String^ stringLooking4, int columnNumber);
-		bool IsStringInColumn(String^ stringLooking4, String^ columnLetter);
+		bool IsStringInColumn(int columnNumber, String^ stringLooking4);
+		bool IsStringInColumn(String^ columnLetter, String^ stringLooking4);
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;
