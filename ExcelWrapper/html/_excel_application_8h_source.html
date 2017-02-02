@@ -53,34 +53,37 @@
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Workbook.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_excel_application_wrapper.html">ExcelApplicationWrapper</a>{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_excel_application_wrapper_1_1_excel_application.html">   10</a></span>&#160;    <span class="keyword">public ref class</span> <a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_excel_application_wrapper_1_1_workbooks.html">   11</a></span>&#160;    <span class="keyword">public ref class</span> <a class="code" href="class_excel_application_wrapper_1_1_workbooks.html">Workbooks</a>{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        Excel::Application^ xl;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        !<a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        ~<a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        Excel::Application^ GetWrappedExcelApplication();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_excel_application_wrapper_1_1_excel_application_1_1_workbooks.html">   21</a></span>&#160;        <span class="keyword">ref class</span> <a class="code" href="class_excel_application_wrapper_1_1_excel_application_1_1_workbooks.html">Workbooks</a>{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            Excel::Application^ xl;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="class_excel_application_wrapper_1_1_excel_application_1_1_workbooks.html">Workbooks</a>(Excel::Application^ xl);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="class_workbook_wrapper_1_1_workbook.html">WorkbookWrapper::Workbook</a>^ Open(System::String^ filePath);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="class_excel_application_wrapper_1_1_workbooks.html">Workbooks</a>(Excel::Application^ xl);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_excel_application_wrapper_1_1_workbook.html">ExcelApplicationWrapper::Workbook</a>^ Open(System::String^ filePath);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_excel_application_wrapper_1_1_workbook.html">ExcelApplicationWrapper::Workbook</a>^ Open(std::string filePath);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_excel_application_wrapper_1_1_excel_application.html">   19</a></span>&#160;    <span class="keyword">public ref class</span> <a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        Excel::Application^ xl;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        !<a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ~<a class="code" href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplication</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        Excel::Application^ GetWrappedExcelApplication();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="class_excel_application_wrapper_1_1_workbooks.html">ExcelApplicationWrapper::Workbooks</a>^ <a class="code" href="class_excel_application_wrapper_1_1_workbooks.html">Workbooks</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
-<div class="ttc" id="class_excel_application_wrapper_1_1_excel_application_html"><div class="ttname"><a href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplicationWrapper::ExcelApplication</a></div><div class="ttdef"><b>Definition:</b> ExcelApplication.h:10</div></div>
+<div class="ttc" id="class_excel_application_wrapper_1_1_workbook_html"><div class="ttname"><a href="class_excel_application_wrapper_1_1_workbook.html">ExcelApplicationWrapper::Workbook</a></div><div class="ttdoc">Workbook Wrapper. </div><div class="ttdef"><b>Definition:</b> Workbook.h:22</div></div>
+<div class="ttc" id="class_excel_application_wrapper_1_1_workbooks_html"><div class="ttname"><a href="class_excel_application_wrapper_1_1_workbooks.html">ExcelApplicationWrapper::Workbooks</a></div><div class="ttdef"><b>Definition:</b> ExcelApplication.h:11</div></div>
+<div class="ttc" id="class_excel_application_wrapper_1_1_excel_application_html"><div class="ttname"><a href="class_excel_application_wrapper_1_1_excel_application.html">ExcelApplicationWrapper::ExcelApplication</a></div><div class="ttdef"><b>Definition:</b> ExcelApplication.h:19</div></div>
 <div class="ttc" id="namespace_microsoft_1_1_office_1_1_interop_1_1_excel_html"><div class="ttname"><a href="namespace_microsoft_1_1_office_1_1_interop_1_1_excel.html">Excel</a></div></div>
-<div class="ttc" id="class_excel_application_wrapper_1_1_excel_application_1_1_workbooks_html"><div class="ttname"><a href="class_excel_application_wrapper_1_1_excel_application_1_1_workbooks.html">ExcelApplicationWrapper::ExcelApplication::Workbooks</a></div><div class="ttdef"><b>Definition:</b> ExcelApplication.h:21</div></div>
-<div class="ttc" id="class_workbook_wrapper_1_1_workbook_html"><div class="ttname"><a href="class_workbook_wrapper_1_1_workbook.html">WorkbookWrapper::Workbook</a></div><div class="ttdoc">Workbook Wrapper. </div><div class="ttdef"><b>Definition:</b> Workbook.h:22</div></div>
 <div class="ttc" id="namespace_excel_application_wrapper_html"><div class="ttname"><a href="namespace_excel_application_wrapper.html">ExcelApplicationWrapper</a></div><div class="ttdef"><b>Definition:</b> ExcelApplication.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 23 2017 13:05:24 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 2 2017 07:21:54 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
