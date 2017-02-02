@@ -23,4 +23,4 @@ Worksheet.Columns(#).... or Worksheet.Columns(Letters)....
 There is also a portion written in native C++.  This is for easy conversion from Excel Range values to std::string or double.  You will need to include ExcelWrapper->Debug->ExcelWrapper.lib for the C++ functionality and the corresponding include file Native.h
 
 
-Author: Graduate Student Chad K. Crowe
+Created by Chad K. Crowe
