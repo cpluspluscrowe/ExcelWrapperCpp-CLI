@@ -47,6 +47,7 @@ Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, B
     ExcelApplicationWrapper.WorksheetUsedRangeWrapper UsedRange : Public
   Methods:
     GetWrappedWorksheet(): PrivateScope, Public, HideBySig
+    Columns(String): PrivateScope, Public, HideBySig
     Columns(Int32): PrivateScope, Public, HideBySig
 Struct Native: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
   :System.ValueType

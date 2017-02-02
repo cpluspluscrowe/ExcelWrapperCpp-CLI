@@ -58,3 +58,7 @@ List<ExcelApplicationWrapper::Range^>^ ExcelApplicationWrapper::Columns::FindInC
 void ExcelApplicationWrapper::Columns::SetColumnIndex(int columnIndex){
 	this->columnIndex = columnIndex;
 }
+
+void ExcelApplicationWrapper::Columns::SetColumnIndexByLetter(String^ columnLetter){
+	this->columnIndex = this->currentSheet->Range(columnLetter + "1")->GetWrappedRange()->Column;
+}

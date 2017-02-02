@@ -17,6 +17,7 @@ namespace ExcelApplicationWrapper{
 		int GetLastUsedRow(String^ columnLetter);
 		List<ExcelApplicationWrapper::Range^>^ FindInColumn(String^ looking4InColumn);
 		void SetColumnIndex(int columnIndex);
+		void SetColumnIndexByLetter(String^ columnLetter);
 	private:
 		int columnIndex;
 		ExcelApplicationWrapper::Worksheet^ currentSheet;

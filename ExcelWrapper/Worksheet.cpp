@@ -21,6 +21,12 @@ ExcelApplicationWrapper::Columns^ ExcelApplicationWrapper::Worksheet::Columns(in
 	return this->currentColumn;
 }
 
+ExcelApplicationWrapper::Columns^ ExcelApplicationWrapper::Worksheet::Columns(String^ columnLetter){
+	this->currentColumn = gcnew ExcelApplicationWrapper::Columns(this);
+	this->currentColumn->SetColumnIndexByLetter(columnLetter);
+	return this->currentColumn;
+}
+
 //Worksheet.Range Wrapper
 
 ExcelApplicationWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(Excel::Worksheet^ worksheet){

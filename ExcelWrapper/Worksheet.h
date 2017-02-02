@@ -56,6 +56,7 @@ namespace ExcelApplicationWrapper{
 
 		Excel::Worksheet^ GetWrappedWorksheet();
 		ExcelApplicationWrapper::Columns^ Columns(int i);
+		ExcelApplicationWrapper::Columns^ Columns(String^ columnLetter);
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;
