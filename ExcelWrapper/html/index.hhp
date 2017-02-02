@@ -13,6 +13,7 @@ Title=My Project
 main="My Project","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
 
 [FILES]
+_columns_8h_source.html
 _excel_application_8h_source.html
 _native_8h_source.html
 _range_8h_source.html
@@ -22,6 +23,8 @@ _workbook_8h_source.html
 _worksheet_8h_source.html
 class_native.html
 class_native-members.html
+class_excel_application_wrapper_1_1_columns.html
+class_excel_application_wrapper_1_1_columns-members.html
 class_excel_application_wrapper_1_1_excel_application.html
 class_excel_application_wrapper_1_1_excel_application-members.html
 class_excel_application_wrapper_1_1_range.html

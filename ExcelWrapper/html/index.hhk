@@ -6,7 +6,14 @@
 <UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#a186ce7cc33c79fb9bf36540a4757ddec"><param name="Name" value="Cells"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_workbook.html#ad64d33ea915538ac59f29e8e4f3460cc"><param name="Name" value="Close"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_columns.html#a738bef799d0f92a6f36e59bf099c8307"><param name="Name" value="Columns"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1sealed.html#aa342606153482898eb46b7f97f86c237"><param name="Name" value="Count"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_columns.html"><param name="Name" value="ExcelApplicationWrapper::Columns"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_columns.html#a738bef799d0f92a6f36e59bf099c8307"><param name="Name" value="Columns"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_columns.html#a0aa22e033742ff327798534d2466b76a"><param name="Name" value="GetLastUsedRow"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_columns.html#a9630f46217423b71bfd784459d505e95"><param name="Name" value="IsStringInColumn"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html"><param name="Name" value="ExcelApplicationWrapper::ExcelApplication"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_excel_application.html#aeda6c047f9daed63f342c0fd074a2b08"><param name="Name" value="GetWrappedExcelApplication"></OBJECT>
@@ -52,7 +59,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html"><param name="Name" value="ExcelApplicationWrapper::Worksheet"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#a186ce7cc33c79fb9bf36540a4757ddec"><param name="Name" value="Cells"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#a62850cb7bd1cc320b24067f01d1aec89"><param name="Name" value="GetLastRowInColumn"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#a5cbfc6765710a9bdc1a4730a4cf5ba1d"><param name="Name" value="GetWrappedWorksheet"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#a8d9d1ac7df2930d190baaa52e44767bc"><param name="Name" value="Range"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#ae4421358a32391f8d6812fb2c75fdb76"><param name="Name" value="UsedRange"></OBJECT>
@@ -69,7 +75,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet_range_wrapper.html#a57bbb52289fa007540f222bc989f340d"><param name="Name" value="WorksheetRangeWrapper"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_range.html#a8161c71daf5eedf2536560f76e2f1474"><param name="Name" value="GetDouble"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#a62850cb7bd1cc320b24067f01d1aec89"><param name="Name" value="GetLastRowInColumn"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_columns.html#a0aa22e033742ff327798534d2466b76a"><param name="Name" value="GetLastUsedRow"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_range.html#a39fe0a87438404c22d279d7310602c2f"><param name="Name" value="GetNative"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_range.html#aca23a1c2571da1a93e089f7062920296"><param name="Name" value="GetString"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_native.html#a56d8a378eafca495d7bf7eaa14e5568d"><param name="Name" value="GetValue"></OBJECT>
@@ -78,6 +84,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_workbook.html#aa8a663cf5010f40823387cfee8c314b7"><param name="Name" value="GetWrappedWorkbook"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_worksheet.html#a5cbfc6765710a9bdc1a4730a4cf5ba1d"><param name="Name" value="GetWrappedWorksheet"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_range.html#a7d2b2aec21d85db557e75e72dcf18766"><param name="Name" value="IsNull"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_excel_application_wrapper_1_1_columns.html#a9630f46217423b71bfd784459d505e95"><param name="Name" value="IsStringInColumn"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_native.html"><param name="Name" value="Native"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_native.html#a56d8a378eafca495d7bf7eaa14e5568d"><param name="Name" value="GetValue"></OBJECT>
