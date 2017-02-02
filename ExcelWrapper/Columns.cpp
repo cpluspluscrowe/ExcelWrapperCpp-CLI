@@ -1,26 +1,17 @@
 #include "stdafx.h"
 #include "Columns.h"
+#include "Worksheet.h"
 
 
-ExcelApplicationWrapper::Columns::Columns(ExcelApplicationWrapper::Worksheet^ currentSheet)
+ExcelApplicationWrapper::WorksheetColumnsWrapper::WorksheetColumnsWrapper(ExcelApplicationWrapper::Worksheet^ currentSheet)
 {
 	this->currentSheet = currentSheet;
 }
 
-bool ExcelApplicationWrapper::Columns::IsStringInColumn(int columnNumber, String^ stringLooking4){
+bool ExcelApplicationWrapper::WorksheetColumnsWrapper::IsStringInColumn(String^ stringLooking4){
 	for (int i = 1; i <= this->currentSheet->UsedRange->Rows->Count; i++){
-		if (!this->currentSheet->Cells(i, columnNumber)->IsNull()){
-			if (this->currentSheet->Cells(i, columnNumber)->GetString() == stringLooking4){
-				return true;
-			}
-		}
-	}
-	return false;
-}
-bool ExcelApplicationWrapper::Columns::IsStringInColumn(String^ columnLetter, String^ stringLooking4){
-	for (int i = 1; i <= this->currentSheet->UsedRange->Rows->Count; i++){
-		if (!this->currentSheet->Range(columnLetter + i.ToString())->IsNull()){
-			if (this->currentSheet->Range(columnLetter + i.ToString())->GetString() == stringLooking4){
+		if (!this->currentSheet->Cells(i, this->columnIndex)->IsNull()){
+			if (this->currentSheet->Cells(i, this->columnIndex)->GetString() == stringLooking4){
 				return true;
 			}
 		}
@@ -28,37 +19,30 @@ bool ExcelApplicationWrapper::Columns::IsStringInColumn(String^ columnLetter, St
 	return false;
 }
 
-int ExcelApplicationWrapper::Columns::GetLastUsedRow(int columnNumber){
+int ExcelApplicationWrapper::WorksheetColumnsWrapper::GetLastUsedRow(){
 	int lastRow = this->currentSheet->UsedRange->Rows->Count;
-	while (lastRow > 1 && this->currentSheet->Cells(lastRow, columnNumber)->IsNull()){
-		lastRow -= 1;
-	}
-	return lastRow;
-}
-int ExcelApplicationWrapper::Columns::GetLastUsedRow(String^ columnLetter){
-	int lastRow = this->currentSheet->UsedRange->Rows->Count;
-	while (lastRow > 1 && this->currentSheet->Range(columnLetter + lastRow.ToString())->IsNull()){
+	while (lastRow > 1 && this->currentSheet->Cells(lastRow, this->columnIndex)->IsNull()){
 		lastRow -= 1;
 	}
 	return lastRow;
 }
 
-List<ExcelApplicationWrapper::Range^>^ ExcelApplicationWrapper::Columns::FindInColumn(String^ looking4InColumn){
-	List<ExcelApplicationWrapper::Range^>^ rangeVector;
+Queue<ExcelApplicationWrapper::Range^>^ ExcelApplicationWrapper::WorksheetColumnsWrapper::FindInColumn(String^ looking4InColumn){
+	Queue<ExcelApplicationWrapper::Range^>^ rangeVector;
 	for (int i = 1; i <= this->currentSheet->UsedRange->Rows->Count; i++){
 		if (!this->currentSheet->Cells(i, this->columnIndex)->IsNull()){
 			if (this->currentSheet->Cells(i, this->columnIndex)->GetString() == looking4InColumn){
-				rangeVector->Add(currentSheet->Cells(i, this->columnIndex));
+				rangeVector->Enqueue(currentSheet->Cells(i, this->columnIndex));
 			}
 		}
 	}
 	return rangeVector;
 }
 
-void ExcelApplicationWrapper::Columns::SetColumnIndex(int columnIndex){
+void ExcelApplicationWrapper::WorksheetColumnsWrapper::SetColumnIndex(int columnIndex){
 	this->columnIndex = columnIndex;
 }
 
-void ExcelApplicationWrapper::Columns::SetColumnIndexByLetter(String^ columnLetter){
+void ExcelApplicationWrapper::WorksheetColumnsWrapper::SetColumnIndexByLetter(String^ columnLetter){
 	this->columnIndex = this->currentSheet->Range(columnLetter + "1")->GetWrappedRange()->Column;
 }

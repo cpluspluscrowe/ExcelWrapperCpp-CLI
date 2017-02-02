@@ -1,13 +1,11 @@
 #pragma once
 #include "Range.h"
+#include "Columns.h"
 using namespace System;
 using namespace Microsoft::Office::Interop::Excel;
 namespace Excel = Microsoft::Office::Interop::Excel;
 
-
 namespace ExcelApplicationWrapper{
-
-	ref class Columns;
 
 	public ref class RowsWrapper sealed{
 	public:
@@ -55,14 +53,14 @@ namespace ExcelApplicationWrapper{
 		Worksheet(Excel::Worksheet^ worksheet);
 
 		Excel::Worksheet^ GetWrappedWorksheet();
-		ExcelApplicationWrapper::Columns^ Columns(int i);
-		ExcelApplicationWrapper::Columns^ Columns(String^ columnLetter);
+		ExcelApplicationWrapper::WorksheetColumnsWrapper^ Columns(int i);
+		ExcelApplicationWrapper::WorksheetColumnsWrapper^ Columns(String^ columnLetter);
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;
 		WorksheetUsedRangeWrapper^ UsedRange;
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
-		ExcelApplicationWrapper::Columns^ currentColumn;
+		ExcelApplicationWrapper::WorksheetColumnsWrapper^ currentColumn;
 	};
 }
