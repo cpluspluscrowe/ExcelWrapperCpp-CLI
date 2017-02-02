@@ -11,11 +11,9 @@ ExcelApplicationWrapper::Workbook::Workbook(Excel::Application^ xl, System::Stri
 }
 
 ExcelApplicationWrapper::Workbook::!Workbook(){
-	this->wrappedWorkbook->Close((System::Object^)false, Type::Missing, Type::Missing);
 }
 
 ExcelApplicationWrapper::Workbook::~Workbook(){
-	this->wrappedWorkbook->Close((System::Object^)false, Type::Missing, Type::Missing);
 }
 Excel::Workbook^ ExcelApplicationWrapper::Workbook::GetWrappedWorkbook(){
 	return this->wrappedWorkbook;
