@@ -1,5 +1,5 @@
 # ExcelWrapperCpp-CLI, Last Update: 2/2/17
-Better Wrapper for Excel using C++/CLI.  Uses managed classes.  Made to feel like C#/VBA's Excel.  
+Flexible Wrapper for Excel using C++/CLI.  The classes expose the underlying API, so you can use these methods and the original API where holes exist in this API. 
 
 Documentation at: Main Page->ExcelWrapper->html
 
