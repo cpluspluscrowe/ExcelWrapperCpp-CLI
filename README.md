@@ -1,5 +1,5 @@
 # ExcelWrapperCpp-CLI, Last Update: 2/2/17
-Flexible Wrapper for Excel using C++/CLI.  The classes expose the underlying API, so you can use these methods and the original API where functionality has not yet been implemented, e.g. worksheet->GetWrappedWorksheet()-> Microsoft::Office::Interop::Excel API here
+Flexible Wrapper for Excel using C++/CLI.  The classes also the underlying API, so you can use the original API where functionality has not yet been implemented, e.g. worksheet->GetWrappedWorksheet()-> "Microsoft::Office::Interop::Excel API here"
 
 Documentation at: Main Page->ExcelWrapper->html
 
