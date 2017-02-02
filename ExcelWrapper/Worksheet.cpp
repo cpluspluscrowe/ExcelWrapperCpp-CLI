@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Worksheet.h"
 #include "Range.h"
+#include "Columns.h"
 
 //Worksheet Wrapper
 ExcelApplicationWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
@@ -14,7 +15,11 @@ ExcelApplicationWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
 Excel::Worksheet^ ExcelApplicationWrapper::Worksheet::GetWrappedWorksheet(){
 	return this->wrappedWorksheet;
 }
-
+ExcelApplicationWrapper::Columns^ ExcelApplicationWrapper::Worksheet::Columns(int i){
+	this->currentColumn = gcnew ExcelApplicationWrapper::Columns(this);
+	this->currentColumn->SetColumnIndex(i);
+	return this->currentColumn;
+}
 
 //Worksheet.Range Wrapper
 

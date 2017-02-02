@@ -42,3 +42,19 @@ int ExcelApplicationWrapper::Columns::GetLastUsedRow(String^ columnLetter){
 	}
 	return lastRow;
 }
+
+List<ExcelApplicationWrapper::Range^>^ ExcelApplicationWrapper::Columns::FindInColumn(String^ looking4InColumn){
+	List<ExcelApplicationWrapper::Range^>^ rangeVector;
+	for (int i = 1; i <= this->currentSheet->UsedRange->Rows->Count; i++){
+		if (!this->currentSheet->Cells(i, this->columnIndex)->IsNull()){
+			if (this->currentSheet->Cells(i, this->columnIndex)->GetString() == looking4InColumn){
+				rangeVector->Add(currentSheet->Cells(i, this->columnIndex));
+			}
+		}
+	}
+	return rangeVector;
+}
+
+void ExcelApplicationWrapper::Columns::SetColumnIndex(int columnIndex){
+	this->columnIndex = columnIndex;
+}

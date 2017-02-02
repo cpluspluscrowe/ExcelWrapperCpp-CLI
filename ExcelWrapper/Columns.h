@@ -1,5 +1,6 @@
 #pragma once
 using namespace System;
+using namespace System::Collections::Generic;
 using namespace Microsoft::Office::Interop::Excel;
 namespace Excel = Microsoft::Office::Interop::Excel;
 #include "Worksheet.h"
@@ -14,7 +15,10 @@ namespace ExcelApplicationWrapper{
 		bool IsStringInColumn(String^ columnLetter, String^ stringLooking4);
 		int GetLastUsedRow(int columnNumber);
 		int GetLastUsedRow(String^ columnLetter);
+		List<ExcelApplicationWrapper::Range^>^ FindInColumn(String^ looking4InColumn);
+		void SetColumnIndex(int columnIndex);
 	private:
+		int columnIndex;
 		ExcelApplicationWrapper::Worksheet^ currentSheet;
 	};
 }

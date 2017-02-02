@@ -4,7 +4,10 @@ using namespace System;
 using namespace Microsoft::Office::Interop::Excel;
 namespace Excel = Microsoft::Office::Interop::Excel;
 
+
 namespace ExcelApplicationWrapper{
+
+	ref class Columns;
 
 	public ref class RowsWrapper sealed{
 	public:
@@ -52,11 +55,13 @@ namespace ExcelApplicationWrapper{
 		Worksheet(Excel::Worksheet^ worksheet);
 
 		Excel::Worksheet^ GetWrappedWorksheet();
+		ExcelApplicationWrapper::Columns^ Columns(int i);
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;
 		WorksheetUsedRangeWrapper^ UsedRange;
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
+		ExcelApplicationWrapper::Columns^ currentColumn;
 	};
 }
