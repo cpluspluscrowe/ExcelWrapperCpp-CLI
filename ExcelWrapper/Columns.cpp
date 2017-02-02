@@ -28,7 +28,7 @@ int ExcelApplicationWrapper::WorksheetColumnsWrapper::GetLastUsedRow(){
 }
 
 Queue<ExcelApplicationWrapper::Range^>^ ExcelApplicationWrapper::WorksheetColumnsWrapper::FindInColumn(String^ looking4InColumn){
-	Queue<ExcelApplicationWrapper::Range^>^ rangeVector;
+	Queue<ExcelApplicationWrapper::Range^>^ rangeVector = gcnew Queue<ExcelApplicationWrapper::Range^>();
 	for (int i = 1; i <= this->currentSheet->UsedRange->Rows->Count; i++){
 		if (!this->currentSheet->Cells(i, this->columnIndex)->IsNull()){
 			if (this->currentSheet->Cells(i, this->columnIndex)->GetString() == looking4InColumn){
