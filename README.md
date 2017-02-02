@@ -17,6 +17,8 @@ Cells, and Value Functions
 
 Worksheet.UsedRange.Rows.Count
 
+Worksheet.Columns(#).... or Worksheet.Columns(Letters)....
+
 
 There is also a portion written in native C++.  This is for easy conversion from Excel Range values to std::string or double.  You will need to include ExcelWrapper->Debug->ExcelWrapper.lib for the C++ functionality and the corresponding include file Native.h
 
