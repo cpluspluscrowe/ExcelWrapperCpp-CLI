@@ -52,10 +52,6 @@ namespace ExcelApplicationWrapper{
 		Worksheet(Excel::Worksheet^ worksheet);
 
 		Excel::Worksheet^ GetWrappedWorksheet();
-		int GetLastRowInColumn(int columnNumber);
-		int GetLastRowInColumn(String^ columnLetter);
-		bool IsStringInColumn(int columnNumber, String^ stringLooking4);
-		bool IsStringInColumn(String^ columnLetter, String^ stringLooking4);
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;

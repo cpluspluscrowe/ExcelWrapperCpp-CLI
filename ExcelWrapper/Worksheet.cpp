@@ -14,41 +14,6 @@ ExcelApplicationWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
 Excel::Worksheet^ ExcelApplicationWrapper::Worksheet::GetWrappedWorksheet(){
 	return this->wrappedWorksheet;
 }
-//Worksheet Functions
-int ExcelApplicationWrapper::Worksheet::GetLastRowInColumn(int columnNumber){
-	int lastRow = this->UsedRange->Rows->Count;
-	while (lastRow > 1 && this->Cells(lastRow, columnNumber)->IsNull()){
-		lastRow -= 1;
-	}
-	return lastRow;
-}
-int ExcelApplicationWrapper::Worksheet::GetLastRowInColumn(String^ columnLetter){
-	int lastRow = this->UsedRange->Rows->Count;
-	while (lastRow > 1 && this->Range(columnLetter + lastRow.ToString())->IsNull()){
-		lastRow -= 1;
-	}
-	return lastRow;
-}
-bool ExcelApplicationWrapper::Worksheet::IsStringInColumn(int columnNumber,String^ stringLooking4){
-	for (int i = 1; i <= this->UsedRange->Rows->Count; i++){
-		if (!this->Cells(i, columnNumber)->IsNull()){
-			if (this->Cells(i, columnNumber)->GetString() == stringLooking4){
-				return true;
-			}
-		}
-	}
-	return false;
-}
-bool ExcelApplicationWrapper::Worksheet::IsStringInColumn(String^ columnLetter, String^ stringLooking4){
-	for (int i = 1; i <= this->UsedRange->Rows->Count; i++){
-		if (!this->Range(columnLetter + i.ToString())->IsNull()){
-			if (this->Range(columnLetter + i.ToString())->GetString() == stringLooking4){
-				return true;
-			}
-		}
-	}
-	return false;
-}
 
 
 //Worksheet.Range Wrapper

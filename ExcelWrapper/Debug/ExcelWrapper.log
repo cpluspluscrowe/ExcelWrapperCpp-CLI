@@ -1,7 +1,10 @@
-﻿Build started 2/2/2017 7:44:44 AM.
+﻿Build started 2/2/2017 8:03:38 AM.
      1>Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib ExcelApplication.cpp Workbook.cpp Worksheet.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib Columns.cpp ExcelApplication.cpp Workbook.cpp Worksheet.cpp
+         Columns.cpp
+     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Native.h(28): warning C4251: 'Native::dValue' : class 'std::shared_ptr<double>' needs to have dll-interface to be used by clients of class 'Native'
+     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Native.h(29): warning C4251: 'Native::sValue' : class 'std::shared_ptr<std::string>' needs to have dll-interface to be used by clients of class 'Native'
          ExcelApplication.cpp
      1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Native.h(28): warning C4251: 'Native::dValue' : class 'std::shared_ptr<double>' needs to have dll-interface to be used by clients of class 'Native'
      1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Native.h(29): warning C4251: 'Native::sValue' : class 'std::shared_ptr<std::string>' needs to have dll-interface to be used by clients of class 'Native'
@@ -17,6 +20,7 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\CCrowe\Documents\Visual Studio 2013\Projects\ExcelWrapper\Debug" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
          Debug\AssemblyInfo.obj
+         Debug\Columns.obj
          Debug\Native.obj
          Debug\ExcelApplication.obj
          Debug\Range.obj
@@ -30,4 +34,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.18
+Time Elapsed 00:00:03.82
