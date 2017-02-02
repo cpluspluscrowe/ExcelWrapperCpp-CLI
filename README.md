@@ -1,6 +1,8 @@
 # ExcelWrapperCpp-CLI, Last Update: 2/2/17
 Better Wrapper for Excel using C++/CLI.  Uses managed classes.  Made to feel like C#/VBA's Excel.  
 
+Documentation at: ExcelWrapper->Debug->html
+
 Interfaces for:
 
 Excel.Application, destructor to Quit() when the program finishes
