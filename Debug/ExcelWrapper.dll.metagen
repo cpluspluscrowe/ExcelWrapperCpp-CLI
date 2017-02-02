@@ -49,6 +49,8 @@ Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, B
     GetWrappedWorksheet(): PrivateScope, Public, HideBySig
     GetLastRowInColumn(String): PrivateScope, Public, HideBySig
     GetLastRowInColumn(Int32): PrivateScope, Public, HideBySig
+    IsStringInColumn(String, String): PrivateScope, Public, HideBySig
+    IsStringInColumn(String, Int32): PrivateScope, Public, HideBySig
 Class ExcelApplicationWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Workbook): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
