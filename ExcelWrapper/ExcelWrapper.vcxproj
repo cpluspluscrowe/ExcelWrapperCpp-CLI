@@ -53,6 +53,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalUsingDirectories>$(FrameworkPathOverride);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -78,7 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Columns.h" />
-    <ClInclude Include="Native.h" />
+    <ClInclude Include="Convert.h" />
     <ClInclude Include="ExcelApplication.h" />
     <ClInclude Include="Range.h" />
     <ClInclude Include="resource.h" />
@@ -89,10 +90,7 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Columns.cpp" />
-    <ClCompile Include="Native.cpp">
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="Convert.cpp" />
     <ClCompile Include="ExcelApplication.cpp" />
     <ClCompile Include="Range.cpp" />
     <ClCompile Include="Stdafx.cpp">

@@ -5,12 +5,10 @@ c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\workbook.obj
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\range.obj
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelapplication.obj
+c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\convert.obj
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\columns.obj
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\assemblyinfo.obj
-c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\native.obj
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\.netframework,version=v4.5.assemblyattributes.obj
-c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\debug\excelwrapper.lib
-c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\debug\excelwrapper.exp
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\debug\excelwrapper.dll
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\debug\excelwrapper.pdb
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\metagen.write.1.tlog
@@ -19,7 +17,6 @@ c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\cl.command.1.tlog
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\cl.read.1.tlog
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\cl.write.1.tlog
-c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\excelwrapper.write.1u.tlog
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\link.command.1.tlog
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\link.read.1.tlog
 c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\debug\excelwrapper.tlog\link.write.1.tlog

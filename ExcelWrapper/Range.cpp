@@ -6,18 +6,16 @@
 ExcelApplicationWrapper::Range::Range(Excel::Range^ rng){
 	this->wrappedRange = rng;
 	double doubleValue;
-	if (rng->Value2 != nullptr){
+	if (rng->Text != nullptr && rng->Text != ""){
 		if (rng->Count == 1){
 			auto isDouble = System::Double::TryParse(rng->Value2->ToString(), doubleValue);
 			if (isDouble){
 				this->dValue = doubleValue;
-				this->native = new Native(doubleValue);
 			}
 			else{
 				this->sValue = rng->Value2->ToString();
 				msclr::interop::marshal_context context;
 				std::string cellValue2 = context.marshal_as<std::string>(this->sValue);
-				this->native = new Native(cellValue2);//initializes as a string
 			}
 		}
 	}
@@ -27,14 +25,6 @@ ExcelApplicationWrapper::Range::Range(Excel::Range^ rng){
 	}
 }
 
-Native* ExcelApplicationWrapper::Range::GetNative(){
-	if (this->native != nullptr){
-		return this->native;
-	}
-	else{
-		return this->native;
-	}
-}
 
 System::String^ ExcelApplicationWrapper::Range::GetString(){
 	return this->sValue;

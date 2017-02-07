@@ -33,10 +33,10 @@
     <ClInclude Include="Range.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Native.h">
+    <ClInclude Include="Columns.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Columns.h">
+    <ClInclude Include="Convert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,10 +59,10 @@
     <ClCompile Include="Range.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Native.cpp">
+    <ClCompile Include="Columns.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Columns.cpp">
+    <ClCompile Include="Convert.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

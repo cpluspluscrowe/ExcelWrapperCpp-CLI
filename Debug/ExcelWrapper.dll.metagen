@@ -14,7 +14,6 @@ Assembly Interop.Microsoft.Office.Interop.Excel.1.8, Version=1.8.*, Culture=Inva
 Class ExcelApplicationWrapper.Range: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Range): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
-    GetNative(): PrivateScope, Public, HideBySig
     IsNull(): PrivateScope, Public, HideBySig
     GetString(): PrivateScope, Public, HideBySig
     GetDouble(): PrivateScope, Public, HideBySig
@@ -57,8 +56,6 @@ Class ExcelApplicationWrapper.Worksheet: AutoLayout, AnsiClass, Class, Public, B
     GetWrappedWorksheet(): PrivateScope, Public, HideBySig
     Columns(String): PrivateScope, Public, HideBySig
     Columns(Int32): PrivateScope, Public, HideBySig
-Struct Native: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
-  :System.ValueType
 Class ExcelApplicationWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Microsoft.Office.Interop.Excel.Workbook): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:

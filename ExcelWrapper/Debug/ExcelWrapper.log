@@ -1,27 +1,38 @@
-﻿Build started 2/2/2017 10:17:59 AM.
-     1>Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2/7/2017 1:43:37 PM.
+     1>Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : Access to the path 'c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\debug\excelwrapper.dll' is denied.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib Workbook.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib Stdafx.cpp
+         Stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ExcelWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUInterop\Interop.Microsoft.Office.Interop.Excel.1.8.dll /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Columns.cpp Convert.cpp ExcelApplication.cpp Range.cpp Workbook.cpp Worksheet.cpp
+         AssemblyInfo.cpp
+         Columns.cpp
+         Convert.cpp
+         ExcelApplication.cpp
+         Range.cpp
          Workbook.cpp
-     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Native.h(28): warning C4251: 'Native::dValue' : class 'std::shared_ptr<double>' needs to have dll-interface to be used by clients of class 'Native'
-     1>c:\users\ccrowe\documents\visual studio 2013\projects\excelwrapper\excelwrapper\Native.h(29): warning C4251: 'Native::sValue' : class 'std::shared_ptr<std::string>' needs to have dll-interface to be used by clients of class 'Native'
      1>Workbook.cpp(39): warning C4101: 'e' : unreferenced local variable
      1>Workbook.cpp(49): warning C4101: 'e' : unreferenced local variable
+         Worksheet.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\CCrowe\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.5.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\CCrowe\Documents\Visual Studio 2013\Projects\ExcelWrapper\Debug" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
          Debug\AssemblyInfo.obj
          Debug\Columns.obj
-         Debug\Native.obj
+         Debug\Convert.obj
          Debug\ExcelApplication.obj
          Debug\Range.obj
          Debug\Stdafx.obj
          Debug\Workbook.obj
          Debug\Worksheet.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
-            Creating library C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.lib and object C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.exp
          ExcelWrapper.vcxproj -> C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\Debug\ExcelWrapper.dll
-     1>Done Building Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\ExcelWrapper\ExcelWrapper.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.05
+Time Elapsed 00:00:09.62

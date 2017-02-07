@@ -36,7 +36,7 @@ bool ExcelApplicationWrapper::Workbook::Save(){
 		this->wrappedWorkbook->Save();
 		return true;
 	}
-	catch (int e){
+	catch (const int& e){
 		throw std::exception("Failed to save");
 	}
 	return false;
@@ -46,7 +46,7 @@ bool ExcelApplicationWrapper::Workbook::Close(bool saveIt){
 		this->wrappedWorkbook->Close((System::Object^)saveIt, Type::Missing, Type::Missing);
 		return true;
 	}
-	catch (int e){
+	catch (const int& e){
 		throw std::exception("Failed to close");
 	}
 	return false;
