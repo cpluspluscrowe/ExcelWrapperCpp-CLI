@@ -9,6 +9,10 @@ ExcelApplicationWrapper::Workbook::Workbook(Excel::Application^ xl, System::Stri
 	this->wrappedWorkbook = xl->Workbooks->Open(filePath, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing);
 	this->Sheets = gcnew ExcelApplicationWrapper::WorkbookSheetsWrapper(this->wrappedWorkbook);
 }
+ExcelApplicationWrapper::Workbook::Workbook(Excel::Workbook^ wb){
+	this->wrappedWorkbook = wb;
+	this->Sheets = gcnew ExcelApplicationWrapper::WorkbookSheetsWrapper(this->wrappedWorkbook);
+}
 
 ExcelApplicationWrapper::Workbook::!Workbook(){
 }
@@ -50,4 +54,9 @@ bool ExcelApplicationWrapper::Workbook::Close(bool saveIt){
 		throw std::exception("Failed to close");
 	}
 	return false;
+}
+
+ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::Add(){
+	ExcelApplicationWrapper::Worksheet^ ws = gcnew Worksheet(static_cast<Excel::Worksheet^>(this->wrappedWorkbook->Sheets->Add((System::Object^)Type::Missing, (System::Object^)Type::Missing, (System::Object^)Type::Missing, (System::Object^)Type::Missing)));
+	return ws;
 }

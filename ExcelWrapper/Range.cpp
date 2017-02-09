@@ -3,42 +3,52 @@
 #include <msclr/marshal_cppstd.h>
 
 ///Range Wrapper Code
+
 ExcelApplicationWrapper::Range::Range(Excel::Range^ rng){
 	this->wrappedRange = rng;
-	double doubleValue;
-	if (rng->Text != nullptr && rng->Text != ""){
-		if (rng->Count == 1){
-			auto isDouble = System::Double::TryParse(rng->Value2->ToString(), doubleValue);
-			if (isDouble){
-				this->dValue = doubleValue;
-			}
-			else{
-				this->sValue = rng->Value2->ToString();
-				msclr::interop::marshal_context context;
-				std::string cellValue2 = context.marshal_as<std::string>(this->sValue);
-			}
-		}
+}
+
+System::String^ ExcelApplicationWrapper::Range::GetFormula(){
+	System::Object^ formula = this->wrappedRange->Formula;
+	if (formula != nullptr){
+		return this->ToString();
 	}
 	else{
-		this->sValue = nullptr;
-		this->dValue = nullptr;
+		return nullptr;
 	}
 }
 
-
-System::String^ ExcelApplicationWrapper::Range::GetString(){
-	return this->sValue;
+System::String^ ExcelApplicationWrapper::Range::GetValueString(){
+	System::Object^ value2 = this->GetValue2();
+	if (value2 != nullptr){
+		return value2->ToString();
+	}
+	else{
+		return nullptr;
+	}
 }
-double^ ExcelApplicationWrapper::Range::GetDouble(){
-	return this->dValue;
+System::Object^ ExcelApplicationWrapper::Range::GetText(){
+	return this->wrappedRange->Text;
+}
+System::Object^ ExcelApplicationWrapper::Range::GetValue2(){
+	return this->wrappedRange->Value2;
 }
 
 bool ExcelApplicationWrapper::Range::IsNull(){
-	if (this->dValue == nullptr && this->sValue == nullptr){
+	if (this->GetText() == nullptr){
 		return true;
 	}
 	else{
 		return false;
+	}
+}
+
+bool ExcelApplicationWrapper::Range::HasFormula(){
+	if (this->GetFormula() == nullptr){
+		return false;
+	}
+	else{
+		return true;
 	}
 }
 

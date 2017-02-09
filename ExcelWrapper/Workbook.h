@@ -14,6 +14,8 @@ namespace ExcelApplicationWrapper{
 		WorkbookSheetsWrapper(Excel::Workbook^ workbook);
 		ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::operator [](String^ worksheetName);
 		ExcelApplicationWrapper::Worksheet^ ExcelApplicationWrapper::WorkbookSheetsWrapper::operator [](int worksheetNumber);
+
+		ExcelApplicationWrapper::Worksheet^ Add();
 	private:
 		Excel::Workbook^ wrappedWorkbook;
 	};
@@ -23,6 +25,7 @@ namespace ExcelApplicationWrapper{
 	{
 	public:
 		Workbook(Excel::Application^ xl, System::String^ filePath);
+		Workbook(Excel::Workbook^ wb);
 		!Workbook();
 		~Workbook();
 		

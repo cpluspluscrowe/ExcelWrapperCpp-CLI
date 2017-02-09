@@ -15,11 +15,14 @@ Class ExcelApplicationWrapper.Range: AutoLayout, AnsiClass, Class, Public, Befor
     Void .ctor(Microsoft.Office.Interop.Excel.Range): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     IsNull(): PrivateScope, Public, HideBySig
-    GetString(): PrivateScope, Public, HideBySig
-    GetDouble(): PrivateScope, Public, HideBySig
+    GetText(): PrivateScope, Public, HideBySig
+    GetFormula(): PrivateScope, Public, HideBySig
+    GetValue2(): PrivateScope, Public, HideBySig
+    GetValueString(): PrivateScope, Public, HideBySig
     SetValue(String): PrivateScope, Public, HideBySig
     SetValue(Double): PrivateScope, Public, HideBySig
     SetValue(Int32): PrivateScope, Public, HideBySig
+    HasFormula(): PrivateScope, Public, HideBySig
     GetWrappedRange(): PrivateScope, Public, HideBySig
 Class ExcelApplicationWrapper.WorksheetColumnsWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(ExcelApplicationWrapper.Worksheet): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -61,7 +64,9 @@ Class ExcelApplicationWrapper.WorkbookSheetsWrapper: AutoLayout, AnsiClass, Clas
   Methods:
     op_Subscript(Int32): PrivateScope, Public, HideBySig, SpecialName
     op_Subscript(String): PrivateScope, Public, HideBySig, SpecialName
+    Add(): PrivateScope, Public, HideBySig
 Class ExcelApplicationWrapper.Workbook: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Office.Interop.Excel.Workbook): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(Microsoft.Office.Interop.Excel.Application, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
     System.IDisposable

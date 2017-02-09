@@ -11,7 +11,7 @@ ExcelApplicationWrapper::WorksheetColumnsWrapper::WorksheetColumnsWrapper(ExcelA
 bool ExcelApplicationWrapper::WorksheetColumnsWrapper::IsStringInColumn(String^ stringLooking4){
 	for (int i = 1; i <= this->currentSheet->UsedRange->Rows->Count; i++){
 		if (!this->currentSheet->Cells(i, this->columnIndex)->IsNull()){
-			if (this->currentSheet->Cells(i, this->columnIndex)->GetString() == stringLooking4){
+			if (this->currentSheet->Cells(i, this->columnIndex)->GetText() == stringLooking4){
 				return true;
 			}
 		}
@@ -31,7 +31,7 @@ Queue<ExcelApplicationWrapper::Range^>^ ExcelApplicationWrapper::WorksheetColumn
 	Queue<ExcelApplicationWrapper::Range^>^ rangeVector = gcnew Queue<ExcelApplicationWrapper::Range^>();
 	for (int i = 1; i <= this->currentSheet->UsedRange->Rows->Count; i++){
 		if (!this->currentSheet->Cells(i, this->columnIndex)->IsNull()){
-			if (this->currentSheet->Cells(i, this->columnIndex)->GetString() == looking4InColumn){
+			if (this->currentSheet->Cells(i, this->columnIndex)->GetText() == looking4InColumn){
 				rangeVector->Enqueue(currentSheet->Cells(i, this->columnIndex));
 			}
 		}
