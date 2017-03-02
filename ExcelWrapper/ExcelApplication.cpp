@@ -11,6 +11,15 @@ ExcelApplicationWrapper::ExcelApplication::ExcelApplication(){
 	this->xl = xl;
 	this->Workbooks = gcnew ExcelApplicationWrapper::Workbooks(this->xl);
 }
+void ExcelApplicationWrapper::ExcelApplication::SetAlerts(bool showAlerts){
+	this->xl->DisplayAlerts = showAlerts;
+}
+void ExcelApplicationWrapper::ExcelApplication::SetVisibility(bool isVisible){
+	this->xl->Visible = isVisible;
+}
+void ExcelApplicationWrapper::ExcelApplication::Quit(){
+	this->xl->Quit();
+}
 ExcelApplicationWrapper::ExcelApplication::~ExcelApplication(){
 	this->xl->Quit();
 }

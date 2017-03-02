@@ -1,2 +1,2 @@
-#TargetFrameworkVersion=v4.5:PlatformToolSet=v120:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit
-Debug|Win32|C:\Users\CCrowe\documents\visual studio 2013\Projects\ExcelWrapper\|
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=true:VCToolArchitecture=Native32Bit
+Debug|Win32|C:\Users\CCrowe\Documents\Visual Studio 2013\Projects\ExcelWrapper\|

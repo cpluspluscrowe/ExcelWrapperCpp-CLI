@@ -24,8 +24,11 @@ namespace ExcelApplicationWrapper{
 		!ExcelApplication();
 		~ExcelApplication();
 
+		void SetAlerts(bool showAlerts);
+		void SetVisibility(bool isVisible);
 		Excel::Application^ GetWrappedExcelApplication();
-
+		void Quit();
+		
 		ExcelApplicationWrapper::Workbooks^ Workbooks;
 	};
 }

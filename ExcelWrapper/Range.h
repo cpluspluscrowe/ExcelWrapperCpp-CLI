@@ -10,7 +10,8 @@ namespace ExcelApplicationWrapper{
 	public:
 		Range(Excel::Range^ rng);
 		bool IsNull();
-		System::Object^ GetText();
+		double GetDouble();
+		System::String^ GetText();
 		System::String^ GetFormula();
 		System::Object^ GetValue2();
 		System::String^ GetValueString();

@@ -10,6 +10,7 @@ ExcelApplicationWrapper::Worksheet::Worksheet(Excel::Worksheet^ worksheet)
 	this->Cells = gcnew WorksheetCellsWrapper(worksheet);
 	this->UsedRange = gcnew WorksheetUsedRangeWrapper(worksheet);
 	this->currentColumn = gcnew ExcelApplicationWrapper::WorksheetColumnsWrapper(this);
+	this->Name = this->wrappedWorksheet->Name;
 }
 ///Worksheet Functions
 Excel::Worksheet^ ExcelApplicationWrapper::Worksheet::GetWrappedWorksheet(){
@@ -24,7 +25,15 @@ ExcelApplicationWrapper::WorksheetColumnsWrapper^ ExcelApplicationWrapper::Works
 	this->currentColumn->SetColumnIndexByLetter(columnLetter);
 	return this->currentColumn;
 }
-
+void ExcelApplicationWrapper::Worksheet::Hide(bool hide){
+	if (hide){
+		this->wrappedWorksheet->Visible = Microsoft::Office::Interop::Excel::XlSheetVisibility::xlSheetHidden;
+	}
+	else{
+		this->wrappedWorksheet->Visible = Microsoft::Office::Interop::Excel::XlSheetVisibility::xlSheetVisible;
+	}
+	
+}
 ///Worksheet.Range Wrapper
 ExcelApplicationWrapper::WorksheetRangeWrapper::WorksheetRangeWrapper(Excel::Worksheet^ worksheet){
 	this->wrappedWorksheet = worksheet;

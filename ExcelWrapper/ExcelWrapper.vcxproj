@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CEBA26ED-BF7C-4125-9AAD-10E63547B90E}</ProjectGuid>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>ExcelWrapper</RootNamespace>
   </PropertyGroup>
@@ -43,6 +43,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\2013 Office System Developer Resources\Excel2013XLLSDK\INCLUDE;C:\2013 Office System Developer Resources\Excel2013XLLSDK\SAMPLES\FRAMEWRK;D:\XLL Examples\Example XLLs\Skeleton VC6;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\2013 Office System Developer Resources\Excel2013XLLSDK\SAMPLES\FRAMEWRK\Debug;D:\XLL Examples\Example XLLs\Skeleton VC6\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

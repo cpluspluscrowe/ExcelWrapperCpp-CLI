@@ -55,10 +55,12 @@ namespace ExcelApplicationWrapper{
 		Excel::Worksheet^ GetWrappedWorksheet();
 		ExcelApplicationWrapper::WorksheetColumnsWrapper^ Columns(int i);
 		ExcelApplicationWrapper::WorksheetColumnsWrapper^ Columns(String^ columnLetter);
+		void Hide(bool hide);
 
 		WorksheetRangeWrapper^ Range;
 		WorksheetCellsWrapper^ Cells;
 		WorksheetUsedRangeWrapper^ UsedRange;
+		String^ Name;
 	private:
 		Excel::Worksheet^ wrappedWorksheet;
 		ExcelApplicationWrapper::WorksheetColumnsWrapper^ currentColumn;

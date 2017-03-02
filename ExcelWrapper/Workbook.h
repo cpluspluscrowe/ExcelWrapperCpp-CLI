@@ -34,6 +34,7 @@ namespace ExcelApplicationWrapper{
 		bool Close(bool saveIt);
 
 		ExcelApplicationWrapper::WorkbookSheetsWrapper^ Sheets;
+		String^ Name;
 	private:
 		Excel::Workbook^ wrappedWorkbook;
 		Dictionary<String^, ExcelApplicationWrapper::Worksheet^> worksheetNameDict;

@@ -8,10 +8,12 @@ ExcelApplicationWrapper::Workbook::Workbook(Excel::Application^ xl, System::Stri
 {
 	this->wrappedWorkbook = xl->Workbooks->Open(filePath, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing, Type::Missing);
 	this->Sheets = gcnew ExcelApplicationWrapper::WorkbookSheetsWrapper(this->wrappedWorkbook);
+	this->Name = this->wrappedWorkbook->Name;
 }
 ExcelApplicationWrapper::Workbook::Workbook(Excel::Workbook^ wb){
 	this->wrappedWorkbook = wb;
 	this->Sheets = gcnew ExcelApplicationWrapper::WorkbookSheetsWrapper(this->wrappedWorkbook);
+	this->Name = this->wrappedWorkbook->Name;
 }
 
 ExcelApplicationWrapper::Workbook::!Workbook(){
